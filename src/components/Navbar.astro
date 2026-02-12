@@ -1,0 +1,218 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+
+  {
+    type: "dropdown",
+    label: "Tourism",
+    links: [
+      { href: "/tourism/domestic", label: "Domestic Tourism" },
+      { href: "/tourism/international", label: "International Tourism" },
+      { href: "/tourism/religious", label: "Religious Tourism" },
+    ],
+  },
+
+  {
+    type: "dropdown",
+    label: "Services",
+    links: [
+      { href: "/services/visas", label: "Visas" },
+      { href: "/services/flights", label: "Flights" },
+    ],
+  },
+
+  { href: "/contact", label: "Contact Us" },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white border-b ">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="h-[88px] flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-4">
+        <img src="/logo.png" class="h-14 w-auto" alt="Lotus Tours" />
+        <div>
+          <p class="text-lg font-semibold text-gray-900">Lotus Tours</p>
+          <p class="text-sm text-gray-500">Travel & Tourism</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+
+        {navItems.map(item => {
+
+          if (item.type === "dropdown") {
+            return (
+              <div class="relative group">
+                <button
+                  class="flex items-center gap-2 text-[15px] font-medium text-gray-800
+                  hover:text-[#C9A24D] transition"
+                >
+                  {item.label}
+
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M6 8l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div
+                  class="absolute left-0 top-full mt-3 w-56 bg-white border rounded-lg shadow-lg
+                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+                >
+                  {item.links.map(link => (
+                    <a
+                      href={link.href}
+                      class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          }
+
+          const isActive = currentPath === item.href;
+
+          return (
+            <a
+              href={item.href}
+              class={`text-[15px] font-medium relative
+              ${isActive ? "text-[#C9A24D]" : "text-gray-800 hover:text-[#C9A24D]"}`}
+            >
+              {item.label}
+
+              {isActive && (
+                <span class="absolute -bottom-2 left-0 w-full h-[2px] bg-[#C9A24D]"></span>
+              )}
+            </a>
+          );
+        })}
+      </nav>
+
+      <!-- Actions -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a
+          href="/book"
+          class="px-6 py-2 rounded-full bg-[#C9A24D] text-white text-sm font-semibold"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="lg:hidden" onclick="openMenu()">
+        <svg class="w-8 h-8">
+          <path d="M4 7h24M4 16h24M4 25h24" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div
+    id="overlay"
+    class="fixed inset-0 bg-black/40 hidden"
+    onclick="closeMenu()"
+  ></div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="fixed top-0 right-0 h-full w-1/2 max-w-sm bg-white
+    translate-x-full transition-transform duration-300 z-50 lg:hidden"
+  >
+    <div class="h-[88px] flex items-center justify-end px-6 border-b">
+      <button onclick="closeMenu()" class="text-2xl">&times;</button>
+    </div>
+
+    <div class="px-6">
+      {navItems.map(item => {
+
+        if (item.type === "dropdown") {
+          return (
+            <details class="border-b group">
+              <summary
+                class="py-4 flex justify-between items-center cursor-pointer font-medium
+                [&::-webkit-details-marker]:hidden"
+              >
+                {item.label}
+
+                <svg
+                  class="w-4 h-4 transition-transform duration-200 group-open:rotate-180"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M6 8l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+
+              <div class="pl-4">
+                {item.links.map(link => (
+                  <a
+                    href={link.href}
+                    class="block py-3 text-sm border-b last:border-0"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </details>
+          );
+        }
+
+        return (
+          <a
+            href={item.href}
+            class="block py-4 border-b font-medium"
+          >
+            {item.label}
+          </a>
+        );
+      })}
+
+      <div class="py-6">
+        <a
+          href="/book"
+          class="block text-center py-3 bg-[#C9A24D] text-white rounded-full font-semibold"
+        >
+          Book Now
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  function openMenu() {
+    document.getElementById("mobileMenu").classList.remove("translate-x-full");
+    document.getElementById("overlay").classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.add("translate-x-full");
+    document.getElementById("overlay").classList.add("hidden");
+  }
+</script>

@@ -1,0 +1,21 @@
+---
+import HeroSection from "../components/Home/HeroSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PopularDetinations from "../components/Home/PopularDestinations.astro";
+import WhyChoose from "../components/Home/WhyChoose.astro";
+import CTA from "../components/CTA.astro";
+import Testionials from "../components/Home/Testimonials.astro";
+import FeaturedPackages from "../components/Home/FeaturedPackages.astro";
+---
+
+<BaseLayout
+  title="Lotus Tours | Travel & Tourism Company"
+  description="Best travel agency for domestic, international and religious tourism."
+>
+ <HeroSection />
+ <PopularDetinations />
+ <FeaturedPackages />
+ <WhyChoose />
+ <Testionials />
+ <CTA />
+</BaseLayout>
