@@ -1,0 +1,99 @@
+<section class="py-24 bg-[#F8F5EF]" id="stats-section">
+
+  <div class="max-w-6xl mx-auto px-6 md:px-12 lg:px-24">
+
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Our Achievements in Numbers
+      </h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Years of experience and thousands of travelers trust Lotus Tours worldwide.
+      </p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+      <div>
+        <h3
+          class="stat-number text-4xl md:text-5xl font-extrabold text-[#C8A976]"
+          data-target="10"
+        >
+          0
+        </h3>
+        <p class="mt-3 text-gray-700 font-medium">Years of Experience</p>
+      </div>
+
+      <div>
+        <h3
+          class="stat-number text-4xl md:text-5xl font-extrabold text-[#C8A976]"
+          data-target="5000"
+        >
+          0
+        </h3>
+        <p class="mt-3 text-gray-700 font-medium">Happy Travelers</p>
+      </div>
+
+      <div>
+        <h3
+          class="stat-number text-4xl md:text-5xl font-extrabold text-[#C8A976]"
+          data-target="30"
+        >
+          0
+        </h3>
+        <p class="mt-3 text-gray-700 font-medium">Travel Destinations</p>
+      </div>
+
+      <div>
+        <h3
+          class="stat-number text-4xl md:text-5xl font-extrabold text-[#C8A976]"
+          data-target="24"
+        >
+          0
+        </h3>
+        <p class="mt-3 text-gray-700 font-medium">Customer Support</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Counter Script -->
+  <script is:inline>
+    const counters = document.querySelectorAll('.stat-number');
+    const section = document.getElementById('stats-section');
+
+    const runCounter = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = target / 80;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += speed;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target + (target >= 100 ? '+' : '+');
+          }
+        };
+
+        updateCount();
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          runCounter();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(section);
+  </script>
+
+</section>

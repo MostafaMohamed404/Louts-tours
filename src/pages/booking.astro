@@ -1,0 +1,24 @@
+---
+import BookingHero from "../components/Booking/BookingHero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ChoseService from "../components/Booking/ChooseService.astro";
+import QuickBooking from "../components/Booking/QuickBooking.astro";
+import WhyBook from "../components/Booking/WhyBook.astro";
+import Cta from "../components/CTA.astro";
+
+---
+
+<BaseLayout
+  title="Book Your Trip | Lotus Tours Travel & Tourism Company"
+  description="Book your next journey with Lotus Tours. Submit your booking request for domestic, international, or religious trips and let our travel experts handle everything for you."
+>
+
+  <!-- Hero Section -->
+ <BookingHero />
+
+<ChoseService />
+<QuickBooking />
+<WhyBook />
+<Cta />
+
+</BaseLayout>
