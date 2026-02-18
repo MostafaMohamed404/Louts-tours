@@ -1,0 +1,88 @@
+---
+
+const images = [
+  {
+    src: "https://images.unsplash.com/photo-1578898887932-dce23a595ad4?q=80&w=800&auto=format&fit=crop",
+    height: "h-[500px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800&auto=format&fit=crop",
+    height: "h-[250px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop",
+    height: "h-[350px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?q=80&w=800&auto=format&fit=crop",
+    height: "h-[450px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+    height: "h-[280px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=800&auto=format&fit=crop",
+    height: "h-[400px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop",
+    height: "h-[300px]"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+    height: "h-[500px]"
+  }
+];
+
+---
+
+<section class="py-20 px-6 md:px-12 lg:px-20 bg-white">
+
+  <!-- Header -->
+  <div class="text-center mb-14">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Travel Gallery
+    </h2>
+
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Real moments from our domestic trips across Egypt.
+    </p>
+
+  </div>
+
+
+  <!-- Masonry Layout -->
+  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+
+    {images.map((image) => (
+
+      <div class="break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition duration-500">
+
+        <img
+          src={image.src}
+          loading="lazy"
+          class={`w-full object-cover ${image.height} transition duration-700 group-hover:scale-110`}
+          alt="Lotus Tours Gallery"
+        />
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div>
+
+        <!-- Hover Text -->
+        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition duration-300">
+
+          <span class="text-white font-semibold">
+            Lotus Tours
+          </span>
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>

@@ -1,0 +1,117 @@
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-5xl">
+
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800">
+        Book Your Trip Now
+      </h2>
+      <p class="text-gray-500 mt-4">
+        Fill in the details below and our team will contact you shortly.
+      </p>
+    </div>
+
+    <form class="bg-white shadow-xl rounded-2xl p-8 grid md:grid-cols-2 gap-6">
+
+      <!-- Full Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Full Name
+        </label>
+        <input 
+          type="text" 
+          placeholder="Enter your full name"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Email Address
+        </label>
+        <input 
+          type="email" 
+          placeholder="example@email.com"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Phone Number
+        </label>
+        <input 
+          type="tel" 
+          placeholder="+20 10 0000 0000"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Destination -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Destination
+        </label>
+        <input 
+          type="text" 
+          placeholder="Sharm El Sheikh"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Guests -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Number of Guests
+        </label>
+        <input 
+          type="number" 
+          min="1"
+          placeholder="2"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Travel Date -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Travel Date
+        </label>
+        <input 
+          type="date"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+          required
+        />
+      </div>
+
+      <!-- Message -->
+      <div class="md:col-span-2">
+        <label class="block text-sm font-medium text-gray-600 mb-2">
+          Special Requests
+        </label>
+        <textarea 
+          rows="4"
+          placeholder="Any special requirements?"
+          class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+        ></textarea>
+      </div>
+
+      <!-- Button -->
+      <div class="md:col-span-2">
+        <button 
+          type="submit"
+          class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-xl transition duration-300 shadow-lg"
+        >
+          Confirm Booking
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

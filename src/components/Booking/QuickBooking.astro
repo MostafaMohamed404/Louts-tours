@@ -1,0 +1,122 @@
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold text-gray-900">
+        Quick Booking Request
+      </h2>
+      <p class="mt-4 text-gray-600 text-lg">
+        Fill in the details and our team will contact you shortly
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="bg-gray-50 rounded-3xl shadow-lg p-10">
+
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Service Type -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Service Type
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-list absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <select
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option>Select Service</option>
+              <option>International Tourism</option>
+              <option>Domestic Tourism</option>
+              <option>Religious Tourism</option>
+              <option>Visa Services</option>
+              <option>Flight Booking</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Destination -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Destination
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input
+              type="text"
+              placeholder="Enter destination"
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Travel Date -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Travel Date
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-calendar-days absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input
+              type="date"
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Number of People -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Number of People
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-users absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input
+              type="number"
+              min="1"
+              placeholder="e.g. 2"
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Phone Number
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input
+              type="tel"
+              placeholder="+20 000 000 000"
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Notes (Optional)
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-pen absolute left-4 top-5 text-gray-400"></i>
+            <textarea
+              rows="1"
+              placeholder="Any special requests"
+              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="md:col-span-2 text-center mt-6">
+          <button
+            type="submit"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-xl transition">
+            <i class="fa-solid fa-paper-plane"></i>
+            Submit Request
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>

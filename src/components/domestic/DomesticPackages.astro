@@ -1,0 +1,146 @@
+---
+const packages = [
+  {
+    title: "Sharm El Sheikh Getaway",
+    location: "Sharm El Sheikh, Egypt",
+    duration: "4 Days / 3 Nights",
+    price: "$320",
+    image: "/images/domestic/sharm.jpg",
+    description: "Enjoy crystal-clear waters, luxury resorts, and unforgettable desert adventures in Sharm El Sheikh."
+  },
+  {
+    title: "Hurghada Red Sea Escape",
+    location: "Hurghada, Egypt",
+    duration: "5 Days / 4 Nights",
+    price: "$350",
+    image: "/images/domestic/hurghada.jpg",
+    description: "Relax on sandy beaches and explore vibrant coral reefs in Hurghada."
+  },
+  {
+    title: "Luxor & Aswan Nile Experience",
+    location: "Luxor & Aswan, Egypt",
+    duration: "5 Days / 4 Nights",
+    price: "$420",
+    image: "/images/domestic/luxor-aswan.jpg",
+    description: "Discover ancient temples, the Nile River, and Egypt’s rich history."
+  },
+  {
+    title: "Marsa Alam Relax Package",
+    location: "Marsa Alam, Egypt",
+    duration: "4 Days / 3 Nights",
+    price: "$340",
+    image: "/images/domestic/marsa-alam.jpg",
+    description: "Experience peaceful beaches and world-class diving spots."
+  },
+  {
+    title: "North Coast Summer Vacation",
+    location: "North Coast, Egypt",
+    duration: "3 Days / 2 Nights",
+    price: "$280",
+    image: "/images/domestic/north-coast.jpg",
+    description: "Enjoy luxury resorts and beautiful Mediterranean beaches."
+  },
+  {
+    title: "Alexandria City Break",
+    location: "Alexandria, Egypt",
+    duration: "3 Days / 2 Nights",
+    price: "$240",
+    image: "/images/domestic/alexandria.jpg",
+    description: "Explore historic landmarks and enjoy the Mediterranean atmosphere."
+  },
+  {
+    title: "Ain Sokhna Weekend Trip",
+    location: "Ain Sokhna, Egypt",
+    duration: "2 Days / 1 Night",
+    price: "$180",
+    image: "/images/domestic/sokhna.jpg",
+    description: "Perfect quick escape with beaches and relaxing resorts."
+  },
+  {
+    title: "Siwa Oasis Adventure",
+    location: "Siwa Oasis, Egypt",
+    duration: "4 Days / 3 Nights",
+    price: "$360",
+    image: "/images/domestic/siwa.jpg",
+    description: "Discover desert beauty, salt lakes, and unique culture in Siwa."
+  },
+  {
+    title: "Marsa Matrouh Beach Holiday",
+    location: "Marsa Matrouh, Egypt",
+    duration: "4 Days / 3 Nights",
+    price: "$300",
+    image: "/images/domestic/matrouh.jpg",
+    description: "Swim in crystal-clear turquoise waters and relax on white sand beaches."
+  }
+];
+---
+
+<section class="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
+
+  <!-- Section Header -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+      Domestic Travel Packages
+    </h2>
+    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
+      Choose from our best domestic travel packages across Egypt and enjoy unforgettable experiences.
+    </p>
+  </div>
+
+  <!-- Packages Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    {packages.map((pkg) => (
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 group">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+          <img
+            src={pkg.image}
+            alt={pkg.title}
+            class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+          />
+          <div class="absolute top-3 right-3 bg-[#C8A976] text-white text-xs px-3 py-1 rounded-full">
+            {pkg.duration}
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-5">
+
+          <h3 class="text-lg font-bold text-gray-900">
+            {pkg.title}
+          </h3>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {pkg.location}
+          </p>
+
+          <p class="text-sm text-gray-600 mt-3">
+            {pkg.description}
+          </p>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between mt-5">
+
+            <span class="text-[#C8A976] font-bold text-lg">
+              {pkg.price}
+            </span>
+
+            <a
+              href="/booking"
+              class="bg-[#C8A976] hover:bg-[#b8954f] text-white text-sm px-4 py-2 rounded-full transition"
+            >
+              Book Now
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+</section>
