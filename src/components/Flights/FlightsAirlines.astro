@@ -1,0 +1,97 @@
+---
+
+const airlines = [
+  {
+    name: "EgyptAir",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/65/EgyptAir_Logo.svg",
+  },
+  {
+    name: "Emirates",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg",
+  },
+  {
+    name: "Turkish Airlines",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Turkish_Airlines_logo_2019_compact.svg",
+  },
+  {
+    name: "Qatar Airways",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Qatar_Airways_Logo.svg",
+  },
+  {
+    name: "Saudi Airlines",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Saudi_Airlines_Logo.svg",
+  },
+  {
+    name: "FlyDubai",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flydubai_logo.svg",
+  },
+];
+
+// duplicate for infinite effect
+const duplicated = [...airlines, ...airlines];
+
+---
+
+<section class="py-24 bg-white overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+        Airline Partners
+      </h2>
+
+      <p class="text-gray-500 mt-4 text-lg">
+        We work with the world's leading airlines
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Slider -->
+  <div class="relative">
+
+    <div class="flex gap-16 animate-scroll whitespace-nowrap">
+
+      {duplicated.map((airline) => (
+
+        <div class="flex items-center justify-center min-w-[180px] opacity-60 hover:opacity-100 transition">
+
+          <img
+            src={airline.logo}
+            alt={airline.name}
+            loading="lazy"
+            class="h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
+          />
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+</style>
