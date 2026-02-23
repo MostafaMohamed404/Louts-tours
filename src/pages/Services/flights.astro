@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FlightsHero from "../../components/Flights/FlightsHero.astro";
+import FlightsDestinations  from "../../components/Flights/FlightsDestinations.astro";
+import FlightsWhyUs from "../../components/Flights/FlightsWhyUs.astro";
+import FlightsAirlines from "../../components/Flights/FlightsAirlines.astro";
+import FlightsVisaBanner from "../../components/Flights/FlightsVisaBanner.astro";
+import Testimonials from "../../components/Home/Testimonials.astro";
+
+
+
+---
+<BaseLayout
+  title="Book International Flights | Lotus Tours"
+  description="Lotus Tours offers secure flight booking worldwide. Compare fares, choose the best options, and enjoy 24/7 support for a smooth and reliable travel experience."
+>
+
+ <FlightsHero />
+ <FlightsDestinations />
+ <FlightsWhyUs />
+ <FlightsAirlines />
+ <FlightsVisaBanner />
+ <Testimonials />
+</BaseLayout>

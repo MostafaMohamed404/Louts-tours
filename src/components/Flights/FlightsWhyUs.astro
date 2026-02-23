@@ -1,0 +1,90 @@
+---
+
+const features = [
+  {
+    title: "Best Price Guarantee",
+    desc: "We offer competitive flight prices with no hidden fees.",
+    icon: "💰",
+  },
+  {
+    title: "Trusted Travel Agency",
+    desc: "Thousands of customers trust us for booking flights worldwide.",
+    icon: "🛡️",
+  },
+  {
+    title: "Visa Assistance",
+    desc: "We help you obtain tourist visas for many destinations.",
+    icon: "🛂",
+  },
+  {
+    title: "24/7 Customer Support",
+    desc: "Our travel experts are available anytime to assist you.",
+    icon: "📞",
+  },
+  {
+    title: "Worldwide Flight Booking",
+    desc: "Book flights from any country to any destination.",
+    icon: "🌍",
+  },
+  {
+    title: "Fast & Secure Booking",
+    desc: "Safe and efficient booking process for your peace of mind.",
+    icon: "✈️",
+  },
+];
+
+---
+
+<section class="py-28 bg-gray-50">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+        Why Book Flights With Us
+      </h2>
+
+      <p class="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
+        Experience seamless flight booking with trusted service, best prices,
+        and full travel support.
+      </p>
+
+    </div>
+
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {features.map((feature) => (
+
+        <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition duration-500 border border-gray-100 hover:-translate-y-2">
+
+          <!-- Icon -->
+          <div class="text-4xl mb-5">
+            {feature.icon}
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            {feature.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-gray-500 leading-relaxed">
+            {feature.desc}
+          </p>
+
+          <!-- Hover Line -->
+          <div class="w-0 group-hover:w-full h-[2px] bg-black mt-6 transition-all duration-500"></div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>

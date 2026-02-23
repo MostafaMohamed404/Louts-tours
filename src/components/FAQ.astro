@@ -1,0 +1,112 @@
+<section class="py-28 bg-[#F8F5EF]">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-gray-600 text-lg md:text-xl">
+        Find answers to the most common questions about our travel services.
+      </p>
+    </div>
+
+    <!-- FAQ Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- FAQ Item -->
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          How do I apply for a visa?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          You can apply through our website by filling the visa application form and submitting the required documents.
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          What are your payment methods?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          We accept credit cards, debit cards, and online payment gateways. Contact us for bank transfer options.
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          Can I track my visa application?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          Yes, after submission you will receive a tracking ID to check the status of your visa online.
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          How long does it take to process a visa?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          Processing times vary depending on the type of visa and the country. Typically, it takes 5-15 business days.
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          Do you provide travel insurance?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          Yes, we offer comprehensive travel insurance packages for all our clients.
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-6">
+        <button class="w-full flex justify-between items-center text-left font-semibold text-gray-900 text-lg accordion">
+          Can I cancel or reschedule my booking?
+          <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mt-4 text-gray-500 text-sm accordion-content hidden">
+          Yes, cancellations and rescheduling are possible according to our policy. Contact support for assistance.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Accordion Script -->
+<script is:inline>
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.accordion svg').forEach(s => s.classList.remove('rotate-180'));
+
+      if(!isOpen){
+        content.classList.remove('hidden');
+        btn.querySelector('svg').classList.add('rotate-180');
+      }
+    });
+  });
+</script>

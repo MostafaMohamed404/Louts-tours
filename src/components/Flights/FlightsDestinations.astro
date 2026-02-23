@@ -1,0 +1,130 @@
+---
+const destinations = [
+  {
+    name: "Dubai",
+    country: "UAE",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
+    price: "$320",
+    duration: "3h 25m",
+    featured: true,
+  },
+  {
+    name: "Istanbul",
+    country: "Turkey",
+    image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop",
+    price: "$280",
+    duration: "2h 50m",
+  },
+  {
+    name: "Riyadh",
+    country: "Saudi Arabia",
+    image: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?q=80&w=1200&auto=format&fit=crop",
+    price: "$260",
+    duration: "2h 30m",
+  },
+  {
+    name: "Athens",
+    country: "Greece",
+    image: "https://images.unsplash.com/photo-1503152394-9db6d8b81470?q=80&w=1200&auto=format&fit=crop",
+    price: "$340",
+    duration: "4h 10m",
+  },
+  {
+    name: "Jeddah",
+    country: "Saudi Arabia",
+    image: "https://images.unsplash.com/photo-1578898887932-dce23a595ad4?q=80&w=1200&auto=format&fit=crop",
+    price: "$300",
+    duration: "2h 15m",
+  },
+];
+---
+
+<section class="py-24 bg-white">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Header -->
+    <div class="flex justify-between items-end mb-12 flex-wrap gap-4">
+
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+          Popular Flight Destinations
+        </h2>
+
+        <p class="text-gray-500 mt-3 text-lg">
+          Explore top international routes with the best prices
+        </p>
+      </div>
+
+      <button class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
+        View All Flights
+      </button>
+
+    </div>
+
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[260px]">
+
+      {destinations.map((dest, index) => (
+
+        <div class={`
+          relative group overflow-hidden rounded-3xl cursor-pointer
+          ${dest.featured ? "md:col-span-2 md:row-span-2" : ""}
+        `}>
+
+          <!-- Image -->
+          <img
+            src={dest.image}
+            alt={dest.name}
+            loading="lazy"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          />
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+          <!-- Content -->
+          <div class="absolute bottom-0 p-6 text-white">
+
+            <h3 class="text-2xl font-bold">
+              {dest.name}
+            </h3>
+
+            <p class="text-white/80">
+              {dest.country}
+            </p>
+
+            <div class="flex items-center justify-between mt-4">
+
+              <div>
+                <p class="text-sm text-white/70">
+                  From
+                </p>
+                <p class="text-xl font-semibold">
+                  {dest.price}
+                </p>
+              </div>
+
+              <div class="text-right">
+                <p class="text-sm text-white/70">
+                  Duration
+                </p>
+                <p class="font-semibold">
+                  {dest.duration}
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
