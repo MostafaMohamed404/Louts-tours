@@ -1,88 +1,93 @@
----
+<section class="py-24 bg-gray-50">
 
-const images = [
-  {
-    src: "https://images.unsplash.com/photo-1578898887932-dce23a595ad4?q=80&w=800&auto=format&fit=crop",
-    height: "h-[500px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800&auto=format&fit=crop",
-    height: "h-[250px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop",
-    height: "h-[350px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?q=80&w=800&auto=format&fit=crop",
-    height: "h-[450px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
-    height: "h-[280px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=800&auto=format&fit=crop",
-    height: "h-[400px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop",
-    height: "h-[300px]"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
-    height: "h-[500px]"
-  }
-];
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
 
----
+<!-- Heading -->
+<div class="text-center mb-16">
 
-<section class="py-20 px-6 md:px-12 lg:px-20 bg-white">
+<span class="text-sm tracking-[3px] text-[#C9A24D] font-semibold">
+TRAVEL GALLERY
+</span>
 
-  <!-- Header -->
-  <div class="text-center mb-14">
+<h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mt-3">
+Explore Egypt Moments
+</h2>
 
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-      Travel Gallery
-    </h2>
+<p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+Discover beautiful travel moments from Egypt's most famous destinations.
+</p>
 
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Real moments from our domestic trips across Egypt.
-    </p>
-
-  </div>
+</div>
 
 
-  <!-- Masonry Layout -->
-  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+<!-- Gallery -->
+<div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-5">
 
-    {images.map((image) => (
+<!-- big image -->
+<div class="col-span-2 row-span-2 group relative overflow-hidden rounded-2xl">
+<img
+src="/images/egypt-experience.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-      <div class="break-inside-avoid group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition duration-500">
+<!-- normal -->
+<div class="group relative overflow-hidden rounded-2xl">
+<img
+src="/images/package-umrah-economy.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-        <img
-          src={image.src}
-          loading="lazy"
-          class={`w-full object-cover ${image.height} transition duration-700 group-hover:scale-110`}
-          alt="Lotus Tours Gallery"
-        />
+<!-- vertical -->
+<div class="row-span-2 group relative overflow-hidden rounded-2xl">
+<img
+src="/images/sharm-el-sheikh.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div>
+<!-- normal -->
+<div class="group relative overflow-hidden rounded-2xl">
+<img
+src="/images/alexandria.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-        <!-- Hover Text -->
-        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition duration-300">
+<!-- normal -->
+<div class="group relative overflow-hidden rounded-2xl">
+<img
+src="/images/cairo.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-          <span class="text-white font-semibold">
-            Lotus Tours
-          </span>
+<!-- wide -->
+<div class="col-span-2 group relative overflow-hidden rounded-2xl">
+<img
+src="/images/istanbul.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-        </div>
+<!-- small right image -->
+<div class="group relative overflow-hidden rounded-2xl">
+<img
+src="/images/dubai.webp"
+loading="lazy"
+class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+/>
+</div>
 
-      </div>
+</div>
 
-    ))}
-
-  </div>
+</div>
 
 </section>
