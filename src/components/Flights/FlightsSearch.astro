@@ -1,0 +1,105 @@
+<section class="relative py-24 bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#020617] text-white overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute -top-20 -left-20 w-96 h-96 bg-[#C9A24D]/20 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-[#C9A24D]/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm tracking-[4px] text-[#C9A24D] font-semibold uppercase">
+        Lotus Flights
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 leading-tight">
+        Search & Book Flights Worldwide
+      </h2>
+
+      <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+        Find the best flight deals with Lotus. Compare prices, choose your destination, and book your journey بسهولة وسرعة.
+      </p>
+    </div>
+
+    <!-- Search Box -->
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 lg:p-10 shadow-2xl">
+
+      <div class="grid lg:grid-cols-6 gap-6">
+
+        <!-- From -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">From</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-plane-departure text-[#C9A24D] mr-3"></i>
+            <input type="text" placeholder="Cairo" class="bg-transparent outline-none w-full text-white placeholder-gray-400"/>
+          </div>
+        </div>
+
+        <!-- To -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">To</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-plane-arrival text-[#C9A24D] mr-3"></i>
+            <input type="text" placeholder="Dubai" class="bg-transparent outline-none w-full text-white placeholder-gray-400"/>
+          </div>
+        </div>
+
+        <!-- Departure -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">Departure</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-calendar-days text-[#C9A24D] mr-3"></i>
+            <input type="date" class="bg-transparent outline-none w-full text-white"/>
+          </div>
+        </div>
+
+        <!-- Return -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">Return</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-calendar-days text-[#C9A24D] mr-3"></i>
+            <input type="date" class="bg-transparent outline-none w-full text-white"/>
+          </div>
+        </div>
+
+        <!-- Passengers -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">Passengers</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-users text-[#C9A24D] mr-3"></i>
+            <select class="bg-transparent outline-none w-full text-white">
+              <option class="text-black">1 Person</option>
+              <option class="text-black">2 Persons</option>
+              <option class="text-black">3 Persons</option>
+              <option class="text-black">4+ Persons</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Class -->
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-400 mb-2">Class</label>
+          <div class="flex items-center bg-white/10 rounded-xl px-4 py-3">
+            <i class="fa-solid fa-crown text-[#C9A24D] mr-3"></i>
+            <select class="bg-transparent outline-none w-full text-white">
+              <option class="text-black">Economy</option>
+              <option class="text-black">Business</option>
+              <option class="text-black">First Class</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Button -->
+      <div class="mt-10 text-center">
+        <button class="bg-[#C9A24D] hover:bg-[#b8923f] text-black font-semibold px-12 py-4 rounded-xl transition duration-300 text-lg shadow-lg hover:scale-105">
+          <i class="fa-solid fa-magnifying-glass mr-2"></i>
+          Search Flights
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>

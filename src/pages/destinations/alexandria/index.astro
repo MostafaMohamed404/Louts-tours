@@ -3,6 +3,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Heroalexandria from "../../../components/destinations/alexandria/Heroalexandria.astro";
 import AboutAlexandria from "../../../components/destinations/alexandria/AboutAlexandria.astro";
 import AttractionsAlexandria from "../../../components/destinations/alexandria/AttractionsAlexandria.astro";
+import ThingsToDoAlexandria from "../../../components/destinations/alexandria/ThingsToDoAlexandria.astro";
+import DayAlexandria from "../../../components/destinations/alexandria/DayAlexandria.astro";
+import WhyChooseAlexandria from "../../../components/destinations/alexandria/WhyChooseAlexandria.astro";
+import ActivityAlexandria from "../../../components/destinations/alexandria/ActivityAlexandria.astro"
+import FAQ from "../../../components/FAQ.astro";
+
 ---
 
 <BaseLayout
@@ -10,8 +16,11 @@ title="Alexandria Tours | Lotus Tours Egypt Travel"
 description="Discover Alexandria with Lotus Tours. Explore the Mediterranean coast, historic landmarks, libraries, and the charm of Egypt’s coastal city."
 >
 
- <Heroalexandria />
- <AboutAlexandria />
- <AttractionsAlexandria />
-
+<Heroalexandria />        <!-- 1. أول حاجة يشوفها - صورة وعنوان -->
+<AboutAlexandria />       <!-- 2. تعريف بالمدينة -->
+<AttractionsAlexandria /> <!-- 3. أشهر الأماكن - كاردات صور -->
+<ActivityAlexandria />    <!-- 4. الأنشطة التفصيلية - grid مع صورة -->
+<DayAlexandria />         <!-- 5. itinerary مقترح - timeline -->
+<WhyChooseAlexandria />   <!-- 6. ليه تختار الوجهة دي -->
+<FAQ /> 
 </BaseLayout>

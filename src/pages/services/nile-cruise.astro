@@ -4,6 +4,8 @@ import NileCruiseOverview from "../../components/nile-cruise/NileCruiseOverview.
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CruiseRoutes from "../../components/nile-cruise/CruiseRoutes.astro";
 import CruiseShips from "../../components/nile-cruise/CruiseShips.astro";
+import CruiseExperience from "../../components/nile-cruise/CruiseExperience.astro";
+import Testimonials from "../../components/Home/Testimonials.astro";
  
 ---
 
@@ -12,8 +14,10 @@ import CruiseShips from "../../components/nile-cruise/CruiseShips.astro";
   description="Book the best Nile cruise packages in Egypt with Lotus Tours. Sail between Luxor and Aswan, explore ancient temples, enjoy full-board luxury accommodation, and discover the magic of the Nile."
 >
   <NileCruiseHero />
+  <CruiseExperience />
   <NileCruiseOverview />
   <CruiseRoutes />
   <CruiseShips />
+  <Testimonials />
 
 </BaseLayout>

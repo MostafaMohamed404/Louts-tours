@@ -1,130 +1,133 @@
----
-const destinations = [
-  {
-    name: "Dubai",
-    country: "UAE",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
-    price: "$320",
-    duration: "3h 25m",
-    featured: true,
-  },
-  {
-    name: "Istanbul",
-    country: "Turkey",
-    image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop",
-    price: "$280",
-    duration: "2h 50m",
-  },
-  {
-    name: "Riyadh",
-    country: "Saudi Arabia",
-    image: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?q=80&w=1200&auto=format&fit=crop",
-    price: "$260",
-    duration: "2h 30m",
-  },
-  {
-    name: "Athens",
-    country: "Greece",
-    image: "https://images.unsplash.com/photo-1503152394-9db6d8b81470?q=80&w=1200&auto=format&fit=crop",
-    price: "$340",
-    duration: "4h 10m",
-  },
-  {
-    name: "Jeddah",
-    country: "Saudi Arabia",
-    image: "https://images.unsplash.com/photo-1578898887932-dce23a595ad4?q=80&w=1200&auto=format&fit=crop",
-    price: "$300",
-    duration: "2h 15m",
-  },
-];
----
+<section class="py-28 bg-white">
 
-<section class="py-24 bg-white">
-
-  <div class="max-w-7xl mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20">
 
     <!-- Header -->
-    <div class="flex justify-between items-end mb-12 flex-wrap gap-4">
+    <header class="text-center mb-20 max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        Book Flights from Cairo to Top Destinations
+      </h2>
 
-      <div>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-          Popular Flight Destinations
-        </h2>
-
-        <p class="text-gray-500 mt-3 text-lg">
-          Explore top international routes with the best prices
-        </p>
-      </div>
-
-      <button class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
-        View All Flights
-      </button>
-
-    </div>
-
+      <p class="text-gray-500 mt-6 text-lg">
+        Explore the most popular international routes with Lotus Travel. 
+        Fast booking and instant confirmation via WhatsApp.
+      </p>
+    </header>
 
     <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[260px]">
+    <div class="grid lg:grid-cols-3 gap-8">
 
-      {destinations.map((dest, index) => (
+      <!-- Featured -->
+      <a href="#"
+         class="group relative lg:col-span-2 rounded-3xl overflow-hidden h-[420px] flex items-end shadow-lg">
 
-        <div class={`
-          relative group overflow-hidden rounded-3xl cursor-pointer
-          ${dest.featured ? "md:col-span-2 md:row-span-2" : ""}
-        `}>
+        <img src="/images/dubai.webp"
+             alt="Flights from Cairo to Dubai"
+             class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
 
-          <!-- Image -->
-          <img
-            src={dest.image}
-            alt={dest.name}
-            loading="lazy"
-            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-          <!-- Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="relative p-8 text-white">
+          <p class="text-[#C9A24D] text-sm uppercase tracking-widest mb-2">
+            Featured Route
+          </p>
 
-          <!-- Content -->
-          <div class="absolute bottom-0 p-6 text-white">
+          <h3 class="text-3xl font-bold mb-3">
+            Cairo → Dubai
+          </h3>
 
-            <h3 class="text-2xl font-bold">
-              {dest.name}
-            </h3>
+          <p class="text-gray-300 text-sm mb-4 max-w-md">
+            Daily flights with flexible schedules and trusted airlines.
+          </p>
 
-            <p class="text-white/80">
-              {dest.country}
-            </p>
-
-            <div class="flex items-center justify-between mt-4">
-
-              <div>
-                <p class="text-sm text-white/70">
-                  From
-                </p>
-                <p class="text-xl font-semibold">
-                  {dest.price}
-                </p>
-              </div>
-
-              <div class="text-right">
-                <p class="text-sm text-white/70">
-                  Duration
-                </p>
-                <p class="font-semibold">
-                  {dest.duration}
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
+          <span class="text-[#C9A24D] font-semibold group-hover:translate-x-1 transition">
+            Book via WhatsApp →
+          </span>
         </div>
+      </a>
 
-      ))}
+      <!-- Right Column -->
+      <div class="grid grid-rows-2 gap-8">
+
+        <a href="#"
+           class="group relative rounded-2xl overflow-hidden flex items-end shadow-md">
+
+          <img src="/images/istanbul.webp"
+               alt="Flights from Cairo to Istanbul"
+               class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+          <div class="relative p-5 text-white w-full">
+            <h3 class="text-xl font-semibold">Cairo → Istanbul</h3>
+            <span class="text-[#C9A24D] text-sm">Book Now →</span>
+          </div>
+        </a>
+
+        <a href="#"
+           class="group relative rounded-2xl overflow-hidden flex items-end shadow-md">
+
+          <img src="/images/athens.webp"
+               alt="Flights from Cairo to Athens"
+               class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+          <div class="relative p-5 text-white w-full">
+            <h3 class="text-xl font-semibold">Cairo → Athens</h3>
+            <span class="text-[#C9A24D] text-sm">Book Now →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Bottom Row -->
+      <a href="#"
+         class="group relative rounded-2xl overflow-hidden h-[220px] flex items-end shadow-md">
+
+        <img src="/images/riyadh.webp"
+             alt="Flights from Cairo to Riyadh"
+             class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+        <div class="relative p-5 text-white w-full">
+          <h3 class="text-xl font-semibold">Cairo → Riyadh</h3>
+          <span class="text-[#C9A24D] text-sm">Book Now →</span>
+        </div>
+      </a>
+
+      <a href="#"
+         class="group relative rounded-2xl overflow-hidden h-[220px] flex items-end shadow-md">
+
+        <img src="/images/jeddah.webp"
+             alt="Flights from Cairo to Jeddah"
+             class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+        <div class="relative p-5 text-white w-full">
+          <h3 class="text-xl font-semibold">Cairo → Jeddah</h3>
+          <span class="text-[#C9A24D] text-sm">Book Now →</span>
+        </div>
+      </a>
+
+      <a href="#"
+         class="group relative rounded-2xl overflow-hidden h-[220px] flex items-end shadow-md">
+
+        <img src="/images/paris.webp"
+             alt="Flights from Cairo to Paris"
+             class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"/>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+        <div class="relative p-5 text-white w-full">
+          <h3 class="text-xl font-semibold">Cairo → Paris</h3>
+          <span class="text-[#C9A24D] text-sm">Book Now →</span>
+        </div>
+      </a>
 
     </div>
 
   </div>
-
 </section>

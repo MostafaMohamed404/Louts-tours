@@ -1,0 +1,108 @@
+<div id="loader" class="loader-wrapper">
+  <div class="loader-content">
+
+    <!-- Brand -->
+    <h1 class="brand">Lotus Tours</h1>
+
+    <!-- Loader -->
+    <div class="orbit">
+      <div class="circle"></div>
+
+      <!-- Plane -->
+      <div class="plane">
+        ✈
+      </div>
+    </div>
+
+    <p class="text">Preparing your trip...</p>
+
+  </div>
+</div>
+
+<style>
+  .loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loader-content {
+    text-align: center;
+  }
+
+  /* Brand */
+  .brand {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #111;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+  }
+
+  /* Orbit */
+  .orbit {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+  }
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #eee;
+    border-radius: 50%;
+  }
+
+  /* Plane */
+  .plane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: -40px center;
+    font-size: 18px;
+    color: #c9a84c;
+    animation: orbit 1.2s linear infinite;
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg) translateX(40px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
+  }
+
+  /* Text */
+  .text {
+    font-size: 0.8rem;
+    color: #777;
+    letter-spacing: 2px;
+    animation: fade 1.2s infinite;
+  }
+
+  @keyframes fade {
+    0%,100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+      loader?.classList.add("hidden");
+    }, 100); // سريع 👈
+  });
+</script>

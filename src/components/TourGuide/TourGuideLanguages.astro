@@ -1,0 +1,31 @@
+<!-- Languages We Guide In -->
+<section class="py-20 bg-[#3E2F1C]">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <span class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold">We Speak Your Language</span>
+    <h2 class="text-4xl font-bold text-white mt-4 mb-12">Available Guide Languages</h2>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      {[
+        { flag: "🇬🇧", lang: "English" },
+        { flag: "🇸🇦", lang: "Arabic" },
+        { flag: "🇫🇷", lang: "French" },
+        { flag: "🇩🇪", lang: "German" },
+        { flag: "🇪🇸", lang: "Spanish" },
+        { flag: "🇮🇹", lang: "Italian" },
+        { flag: "🇷🇺", lang: "Russian" },
+        { flag: "🇨🇳", lang: "Chinese" },
+      ].map((item) => (
+        <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-2xl px-6 py-3 text-white hover:bg-[#C6A75E]/20 transition duration-300">
+          <span class="text-2xl">{item.flag}</span>
+          <span class="font-medium">{item.lang}</span>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-white/60 mt-10 text-sm">
+      Don't see your language? <a href="/contact" class="text-[#C6A75E] underline hover:text-[#b2965c]">Contact us</a> and we'll find the right guide for you.
+    </p>
+
+  </div>
+</section>

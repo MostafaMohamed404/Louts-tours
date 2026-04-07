@@ -1,72 +1,68 @@
 ---
-
 const airlines = [
-  {
-    name: "EgyptAir",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/65/EgyptAir_Logo.svg",
-  },
-  {
-    name: "Emirates",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg",
-  },
-  {
-    name: "Turkish Airlines",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Turkish_Airlines_logo_2019_compact.svg",
-  },
-  {
-    name: "Qatar Airways",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Qatar_Airways_Logo.svg",
-  },
-  {
-    name: "Saudi Airlines",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Saudi_Airlines_Logo.svg",
-  },
-  {
-    name: "FlyDubai",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flydubai_logo.svg",
-  },
+  { name: "EgyptAir", logo: "https://upload.wikimedia.org/wikipedia/commons/6/65/EgyptAir_Logo.svg" },
+  { name: "Emirates", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" },
+  { name: "Turkish Airlines", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Turkish_Airlines_logo_2019_compact.svg" },
+  { name: "Qatar Airways", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Qatar_Airways_Logo.svg" },
+  { name: "Saudi Airlines", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Saudi_Airlines_Logo.svg" },
+  { name: "FlyDubai", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flydubai_logo.svg" },
 ];
 
-// duplicate for infinite effect
 const duplicated = [...airlines, ...airlines];
-
 ---
 
-<section class="py-24 bg-white overflow-hidden">
+<section class="py-28 bg-white overflow-hidden">
 
-  <div class="max-w-7xl mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20">
 
     <!-- Header -->
-    <div class="text-center mb-14">
-
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+    <div class="text-center mb-20 max-w-2xl mx-auto">
+      <span class="text-[#C9A24D] uppercase tracking-[4px] text-sm font-semibold">
         Airline Partners
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+        Trusted Airlines Worldwide
       </h2>
 
-      <p class="text-gray-500 mt-4 text-lg">
-        We work with the world's leading airlines
+      <p class="text-gray-500 mt-5 text-lg">
+        We collaborate with leading global airlines to ensure a reliable and comfortable travel experience.
       </p>
-
     </div>
 
   </div>
 
-
-  <!-- Slider -->
+  <!-- Slider Wrapper -->
   <div class="relative">
 
-    <div class="flex gap-16 animate-scroll whitespace-nowrap">
+    <!-- Fade Edges -->
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+    <!-- Slider -->
+    <div class="flex gap-20 animate-scroll items-center">
 
       {duplicated.map((airline) => (
 
-        <div class="flex items-center justify-center min-w-[180px] opacity-60 hover:opacity-100 transition">
+        <div class="group flex items-center justify-center min-w-[200px]">
 
-          <img
-            src={airline.logo}
-            alt={airline.name}
-            loading="lazy"
-            class="h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
-          />
+          <div class="flex items-center justify-center h-20 w-full px-6 
+                      bg-white border border-gray-100 rounded-2xl 
+                      shadow-sm hover:shadow-md 
+                      transition duration-300">
+
+            <img
+              src={airline.logo}
+              alt={airline.name}
+              loading="lazy"
+              class="h-10 object-contain 
+                     opacity-70 group-hover:opacity-100 
+                     grayscale group-hover:grayscale-0 
+                     group-hover:scale-105 
+                     transition duration-300"
+            />
+
+          </div>
 
         </div>
 
@@ -78,9 +74,7 @@ const duplicated = [...airlines, ...airlines];
 
 </section>
 
-
 <style>
-
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -91,7 +85,6 @@ const duplicated = [...airlines, ...airlines];
 }
 
 .animate-scroll {
-  animation: scroll 25s linear infinite;
+  animation: scroll 30s linear infinite;
 }
-
 </style>

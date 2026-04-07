@@ -1,118 +1,172 @@
-<section class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
+<!-- Quick Booking Form -->
+<section id="booking-form" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
 
     <!-- Header -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="text-4xl font-bold text-gray-900">
-        Quick Booking Request
-      </h2>
-      <p class="mt-4 text-gray-600 text-lg">
-        Fill in the details and our team will contact you shortly
+    <div class="text-center mb-16">
+      <span class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold">Get In Touch</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#3E2F1C] mt-4">Quick Booking Request</h2>
+      <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
+        Fill in your details and our team will contact you within 24 hours
       </p>
     </div>
 
     <!-- Form Card -->
-    <div class="bg-gray-50 rounded-3xl shadow-lg p-10">
+    <div class="bg-[#F8F5EF] rounded-3xl shadow-lg p-8 md:p-12">
 
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Full Name -->
+        <div>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Full Name</label>
+          <div class="relative">
+            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <input
+              type="text"
+              placeholder="Enter your full name"
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Email Address</label>
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <input
+              type="email"
+              placeholder="example@email.com"
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Phone Number</label>
+          <div class="relative">
+            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <input
+              type="tel"
+              placeholder="+20 10 0000 0000"
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+              required
+            />
+          </div>
+        </div>
 
         <!-- Service Type -->
         <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Service Type
-          </label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Service Type</label>
           <div class="relative">
-            <i class="fa-solid fa-list absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <i class="fa-solid fa-list absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
             <select
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-              <option>Select Service</option>
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition appearance-none"
+              required
+            >
+              <option value="" disabled selected>Select a service</option>
               <option>International Tourism</option>
               <option>Domestic Tourism</option>
-              <option>Religious Tourism</option>
+              <option>Religious Tourism (Hajj & Umrah)</option>
               <option>Visa Services</option>
               <option>Flight Booking</option>
+              <option>Hotel Booking</option>
+              <option>Nile Cruise</option>
+              <option>Transportation</option>
             </select>
           </div>
         </div>
 
         <!-- Destination -->
         <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Destination
-          </label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Destination</label>
           <div class="relative">
-            <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
             <input
               type="text"
-              placeholder="Enter destination"
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+              placeholder="e.g. Dubai, Sharm El Sheikh"
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+            />
           </div>
         </div>
 
         <!-- Travel Date -->
         <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Travel Date
-          </label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Travel Date</label>
           <div class="relative">
-            <i class="fa-solid fa-calendar-days absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <i class="fa-solid fa-calendar-days absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
             <input
               type="date"
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+            />
           </div>
         </div>
 
         <!-- Number of People -->
         <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Number of People
-          </label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Number of Travelers</label>
           <div class="relative">
-            <i class="fa-solid fa-users absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <i class="fa-solid fa-users absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
             <input
               type="number"
               min="1"
               placeholder="e.g. 2"
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
+            />
           </div>
         </div>
 
-        <!-- Phone -->
+        <!-- Budget -->
         <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Phone Number
-          </label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Budget (Optional)</label>
           <div class="relative">
-            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-            <input
-              type="tel"
-              placeholder="+20 000 000 000"
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            <i class="fa-solid fa-dollar-sign absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <select
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition appearance-none"
+            >
+              <option value="">Select budget range</option>
+              <option>Under $500</option>
+              <option>$500 - $1,000</option>
+              <option>$1,000 - $2,500</option>
+              <option>$2,500 - $5,000</option>
+              <option>Above $5,000</option>
+            </select>
           </div>
         </div>
 
-        <!-- Notes -->
-        <div>
-          <label class="block mb-2 font-medium text-gray-700">
-            Notes (Optional)
-          </label>
+        <!-- Message -->
+        <div class="md:col-span-2">
+          <label class="block mb-2 font-medium text-[#3E2F1C]">Special Requests (Optional)</label>
           <div class="relative">
-            <i class="fa-solid fa-pen absolute left-4 top-5 text-gray-400"></i>
+            <i class="fa-solid fa-pen absolute left-4 top-5 text-[#C6A75E]"></i>
             <textarea
-              rows="1"
-              placeholder="Any special requests"
-              class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+              rows="4"
+              placeholder="Any special requirements or preferences..."
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition resize-none"
+            ></textarea>
           </div>
         </div>
 
         <!-- Submit -->
-        <div class="md:col-span-2 text-center mt-6">
+        <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 justify-center mt-4">
           <button
             type="submit"
-            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-xl transition">
+            class="inline-flex items-center justify-center gap-3 bg-[#C6A75E] hover:bg-[#b2965c] hover:scale-105 text-white font-semibold px-12 py-4 rounded-2xl transition transform duration-300 shadow-lg"
+          >
             <i class="fa-solid fa-paper-plane"></i>
-            Submit Request
+            Submit Booking Request
           </button>
+          <a
+            href="https://wa.me/201000000000"
+            target="_blank"
+            class="inline-flex items-center justify-center gap-3 bg-gray-900 hover:bg-gray-800 hover:scale-105 text-white font-semibold px-12 py-4 rounded-2xl transition transform duration-300 shadow-lg"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            Book via WhatsApp
+          </a>
         </div>
 
       </form>

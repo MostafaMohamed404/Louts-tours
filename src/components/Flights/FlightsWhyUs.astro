@@ -1,90 +1,144 @@
----
+<section class="py-28 bg-[#FAFAFA] relative overflow-hidden">
 
-const features = [
-  {
-    title: "Best Price Guarantee",
-    desc: "We offer competitive flight prices with no hidden fees.",
-    icon: "💰",
-  },
-  {
-    title: "Trusted Travel Agency",
-    desc: "Thousands of customers trust us for booking flights worldwide.",
-    icon: "🛡️",
-  },
-  {
-    title: "Visa Assistance",
-    desc: "We help you obtain tourist visas for many destinations.",
-    icon: "🛂",
-  },
-  {
-    title: "24/7 Customer Support",
-    desc: "Our travel experts are available anytime to assist you.",
-    icon: "📞",
-  },
-  {
-    title: "Worldwide Flight Booking",
-    desc: "Book flights from any country to any destination.",
-    icon: "🌍",
-  },
-  {
-    title: "Fast & Secure Booking",
-    desc: "Safe and efficient booking process for your peace of mind.",
-    icon: "✈️",
-  },
-];
+  <!-- subtle background -->
+  <div class="absolute inset-0 opacity-30 pointer-events-none"
+       style="background-image: radial-gradient(#C9A24D 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
 
----
-
-<section class="py-28 bg-gray-50">
-
-  <div class="max-w-7xl mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20 relative">
 
     <!-- Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-20 max-w-3xl mx-auto">
+      <span class="text-[#C9A24D] uppercase tracking-[4px] text-sm font-semibold">
+        Why Choose Us
+      </span>
 
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Why Book Flights With Us
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4 leading-tight">
+        A Better Way to Book Your Flights
       </h2>
 
-      <p class="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
-        Experience seamless flight booking with trusted service, best prices,
-        and full travel support.
+      <p class="text-gray-500 mt-6 text-lg">
+        We make flight booking simple, fast, and reliable with real human support and the best options available.
       </p>
-
     </div>
 
+    <!-- Features -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      {features.map((feature) => (
-
-        <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition duration-500 border border-gray-100 hover:-translate-y-2">
-
+      <!-- Feature -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300">
+        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#C9A24D]/10 mb-6 group-hover:scale-110 transition">
+          
           <!-- Icon -->
-          <div class="text-4xl mb-5">
-            {feature.icon}
-          </div>
-
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            {feature.title}
-          </h3>
-
-          <!-- Description -->
-          <p class="text-gray-500 leading-relaxed">
-            {feature.desc}
-          </p>
-
-          <!-- Hover Line -->
-          <div class="w-0 group-hover:w-full h-[2px] bg-black mt-6 transition-all duration-500"></div>
+          <svg class="w-6 h-6 text-[#C9A24D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M2 16l20-6-20-6v7l15 5-15 5v7z"/>
+          </svg>
 
         </div>
 
-      ))}
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Easy Booking
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+          Book your flight in minutes through WhatsApp with quick confirmation.
+        </p>
+      </div>
+
+      <!-- Feature -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300">
+        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#C9A24D]/10 mb-6 group-hover:scale-110 transition">
+
+          <svg class="w-6 h-6 text-[#C9A24D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          24/7 Support
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+          Our team is always available to help you before and after booking.
+        </p>
+      </div>
+
+      <!-- Feature -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300">
+        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#C9A24D]/10 mb-6 group-hover:scale-110 transition">
+
+          <svg class="w-6 h-6 text-[#C9A24D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18"/>
+          </svg>
+
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Global Routes
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+          Flights available from any country to any destination worldwide.
+        </p>
+      </div>
+
+      <!-- Feature -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300">
+        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#C9A24D]/10 mb-6 group-hover:scale-110 transition">
+
+          <svg class="w-6 h-6 text-[#C9A24D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M3 7h18M5 7l1 12h12l1-12"/>
+            <path d="M9 11v6M15 11v6"/>
+          </svg>
+
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Trusted Airlines
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+          We work with top international airlines for safe and comfortable travel.
+        </p>
+      </div>
 
     </div>
 
-  </div>
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center">
 
+      <div>
+        <h4 class="text-3xl font-bold text-gray-900">10K+</h4>
+        <p class="text-gray-500 text-sm mt-2">Happy Clients</p>
+      </div>
+
+      <div>
+        <h4 class="text-3xl font-bold text-gray-900">150+</h4>
+        <p class="text-gray-500 text-sm mt-2">Destinations</p>
+      </div>
+
+      <div>
+        <h4 class="text-3xl font-bold text-gray-900">50+</h4>
+        <p class="text-gray-500 text-sm mt-2">Airlines</p>
+      </div>
+
+      <div>
+        <h4 class="text-3xl font-bold text-gray-900">24/7</h4>
+        <p class="text-gray-500 text-sm mt-2">Support</p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-20 text-center">
+      <a href="#"
+         class="inline-block bg-[#C9A24D] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:scale-105 transition">
+        Start Booking Now
+      </a>
+    </div>
+
+  </div>
 </section>
