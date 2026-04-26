@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroHotels from "../../components/Hotels/HeroHotels.astro";
+import HotelTypes from "../../components/Hotels/HotelTypes.astro";
 import PopularHotel from "../../components/Hotels/PopularHotel.astro";
-import FeaturedHotels from "../../components/Hotels/FeaturedHotels.astro";
+import HotelWhyUs from "../../components/Hotels/HotelWhyUs.astro";
+import CTA from "../../components/CTA.astro";
 ---
 
-
 <BaseLayout
-    title="Hotels Booking Services | Egypt, Saudi Arabia, UAE, Turkey, Greece, Lebanon | Lotus Tours"
-    description="Lotus Tours offers hotels booking services for Egypt, Saudi Arabia, UAE, Turkey, Greece, and Lebanon. Find the perfect hotel for your trip and book it directly with Lotus Tours."
-  >
-
+  title="Hotel Booking | Egypt, UAE, Turkey, Greece & More | Lotus Tours"
+  description="Book hotels worldwide with Lotus Tours. Best rates on luxury resorts, beach hotels, and budget stays in Egypt, Dubai, Turkey, Greece, Lebanon, and more."
+>
   <HeroHotels />
+  <HotelTypes />
   <PopularHotel />
-  <!-- <FeaturedHotels /> -->
-
-  </BaseLayout>
+  <HotelWhyUs />
+  <CTA />
+</BaseLayout>

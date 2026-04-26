@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import FAQ from "../../components/FAQ.astro";
+import ServicesHero from "../../components/Services/ServicesHero.astro";
+import ServicesOverview from "../../components/Services/ServicesOverview.astro";
+import ServicesGrid from "../../components/Services/ServicesGrid.astro";
+import ServicesWhyUs from "../../components/Services/ServicesWhyUs.astro";
+import ServicesCTA from "../../components/Services/ServicesCTA.astro";
+---
+
+<BaseLayout
+  title="Our Travel Services | Visas, Flights, Hotels & More | Lotus Tours"
+  description="Explore Lotus Tours' full range of travel services including visa assistance, flight booking, hotel reservations, Nile cruises, transportation, and professional tour guides."
+>
+  <ServicesHero />
+  <ServicesOverview />
+  <ServicesGrid />
+  <ServicesWhyUs />
+  <ServicesCTA />
+
+  <FAQ />
+</BaseLayout>

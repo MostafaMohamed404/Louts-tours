@@ -1,38 +1,82 @@
-<section class="py-28 bg-white">
+<section class="py-20 bg-[#FAFAF8]">
   <div class="container mx-auto px-6 lg:px-20">
 
     <!-- Title -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-14">
       <span class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold">
         Trusted By
       </span>
       <h2 class="text-4xl font-bold text-[#3E2F1C] mt-4">
         Our Global Partners
       </h2>
+      <p class="mt-3 text-[#5A4A36] text-sm max-w-xl mx-auto">
+        We work with the world's leading airlines and hospitality brands to deliver the best travel experiences.
+      </p>
     </div>
 
-    <!-- Logos -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+    <!-- Logos — scrolling marquee on mobile, grid on desktop -->
+    <div class="hidden md:grid grid-cols-3 lg:grid-cols-6 gap-10 items-center">
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- Emirates -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
+             alt="Emirates" class="h-8 object-contain" />
+      </a>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- EgyptAir -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Egyptair_logo.svg"
+             alt="EgyptAir" class="h-8 object-contain" />
+      </a>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- Turkish Airlines -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Turkish_Airlines_logo_2019_compact.svg"
+             alt="Turkish Airlines" class="h-8 object-contain" />
+      </a>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- Qatar Airways -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/31/Qatar_Airways_Logo.svg"
+             alt="Qatar Airways" class="h-10 object-contain" />
+      </a>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- Hilton -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Hilton_Hotels_%26_Resorts_logo.svg"
+             alt="Hilton" class="h-7 object-contain" />
+      </a>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
-           class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300" />
+      <!-- Booking.com -->
+      <a href="#" class="group flex items-center justify-center h-14 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition duration-300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg"
+             alt="Booking.com" class="h-7 object-contain" />
+      </a>
 
+    </div>
+
+    <!-- Mobile: marquee scroll -->
+    <div class="md:hidden overflow-hidden">
+      <div class="flex gap-12 items-center w-max" style="animation: marquee 18s linear infinite;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" alt="Emirates" class="h-7 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Egyptair_logo.svg" alt="EgyptAir" class="h-7 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Turkish_Airlines_logo_2019_compact.svg" alt="Turkish Airlines" class="h-7 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/31/Qatar_Airways_Logo.svg" alt="Qatar Airways" class="h-8 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Hilton_Hotels_%26_Resorts_logo.svg" alt="Hilton" class="h-6 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg" alt="Booking.com" class="h-6 object-contain grayscale opacity-60" />
+        <!-- repeat for seamless loop -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" alt="Emirates" class="h-7 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Egyptair_logo.svg" alt="EgyptAir" class="h-7 object-contain grayscale opacity-60" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Turkish_Airlines_logo_2019_compact.svg" alt="Turkish Airlines" class="h-7 object-contain grayscale opacity-60" />
+      </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
