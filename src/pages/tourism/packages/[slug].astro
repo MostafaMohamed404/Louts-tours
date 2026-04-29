@@ -1,0 +1,305 @@
+---
+// src/pages/tourism/packages/[slug].astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { egyptPackages, getPackageBySlug, getAllSlugs } from "../../../data/egyptPackages";
+
+export function getStaticPaths() {
+  return getAllSlugs().map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const pkg = getPackageBySlug(slug);
+
+if (!pkg) return Astro.redirect("/404");
+---
+
+<BaseLayout
+  title={`${pkg.title} | ${pkg.duration} | Lotus Tours`}
+  description={pkg.description}
+>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="relative h-[70vh] flex items-end overflow-hidden">
+    <img
+      src={pkg.image}
+      alt={pkg.title}
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-white/60 text-sm mb-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <a href="/tourism/packages-Egypt-travel" class="hover:text-white transition-colors">Egypt Packages</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <span class="text-white">{pkg.title}</span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <!-- Route -->
+          <div class="flex items-center gap-1.5 flex-wrap mb-3">
+            {pkg.locations.map((loc, i) => (
+              <>
+                <span class="text-white/70 text-sm">{loc}</span>
+                {i < pkg.locations.length - 1 && (
+                  <i class="fa-solid fa-arrow-right text-[#C6A75E] text-[10px]"></i>
+                )}
+              </>
+            ))}
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-3">
+            {pkg.title}
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white text-sm">
+              <i class="fa-regular fa-clock text-[#C6A75E]"></i>
+              {pkg.duration}
+            </span>
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white text-sm">
+              <i class="fa-solid fa-location-dot text-[#C6A75E]"></i>
+              {pkg.locations.length} Destinations
+            </span>
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white text-sm">
+              <i class="fa-solid fa-star text-[#C6A75E]"></i>
+              5★ Experience
+            </span>
+          </div>
+        </div>
+
+        <!-- Price Card -->
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 min-w-[220px]">
+          <p class="text-white/60 text-xs uppercase tracking-wider mb-1">Starting From</p>
+          <p class={`font-bold text-white mb-1 ${pkg.price === "On Request" ? "text-xl" : "text-3xl"}`}>
+            {pkg.price}
+          </p>
+          <p class="text-white/60 text-xs">{pkg.priceNote}</p>
+          <a
+            href="/booking"
+            class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-[#C6A75E] hover:bg-[#b2965c]
+                   text-white font-semibold px-6 py-3 rounded-2xl transition-all duration-200 hover:scale-105 text-sm"
+          >
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAIN CONTENT ──────────────────────────────────── -->
+  <div class="bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+        <!-- LEFT: Main Content -->
+        <div class="lg:col-span-2 space-y-10">
+
+          <!-- Overview -->
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-[#C6A75E]/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-info text-[#C6A75E] text-xs"></i>
+              </span>
+              Package Overview
+            </h2>
+            <p class="text-gray-600 leading-relaxed">{pkg.description}</p>
+
+            <!-- Highlights -->
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {pkg.highlights.map((h) => (
+                <div class="flex items-start gap-3 p-3 bg-[#FAF8F5] rounded-xl">
+                  <i class="fa-solid fa-check text-[#C6A75E] mt-0.5 flex-shrink-0 text-sm"></i>
+                  <span class="text-sm text-gray-700 font-medium">{h}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Itinerary -->
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-[#C6A75E]/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-route text-[#C6A75E] text-xs"></i>
+              </span>
+              Day by Day Itinerary
+            </h2>
+
+            <div class="space-y-0">
+              {pkg.itinerary.map((day, i) => (
+                <div class="relative flex gap-5">
+                  <!-- Timeline line -->
+                  <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-[#C6A75E] flex items-center justify-center flex-shrink-0 shadow-md z-10">
+                      <span class="text-white text-xs font-bold">{day.day}</span>
+                    </div>
+                    {i < pkg.itinerary.length - 1 && (
+                      <div class="w-px flex-1 bg-gray-200 my-1"></div>
+                    )}
+                  </div>
+
+                  <!-- Content -->
+                  <div class={`pb-8 flex-1 ${i === pkg.itinerary.length - 1 ? "pb-0" : ""}`}>
+                    <h3 class="font-bold text-gray-900 text-base mb-1">
+                      Day {day.day} — {day.title}
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-3">{day.description}</p>
+                    <div class="flex flex-wrap gap-2">
+                      {day.activities.map((act) => (
+                        <span class="inline-flex items-center gap-1.5 text-xs bg-[#C6A75E]/8 text-[#9a7c3e] border border-[#C6A75E]/20 px-3 py-1.5 rounded-full font-medium">
+                          <i class="fa-solid fa-circle text-[5px]"></i>
+                          {act}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Gallery -->
+          {pkg.gallery.length > 1 && (
+            <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-[#C6A75E]/10 flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-images text-[#C6A75E] text-xs"></i>
+                </span>
+                Gallery
+              </h2>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {pkg.gallery.map((img, i) => (
+                  <div class={`overflow-hidden rounded-xl ${i === 0 ? "col-span-2 sm:col-span-2 row-span-1" : ""}`}>
+                    <img
+                      src={img}
+                      alt={`${pkg.title} ${i + 1}`}
+                      class="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80';"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <div class="space-y-6">
+
+          <!-- Includes -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i>
+              What's Included
+            </h3>
+            <ul class="space-y-2.5">
+              {pkg.includes.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                  <i class="fa-solid fa-check text-emerald-500 mt-0.5 flex-shrink-0 text-xs"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Excludes -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-circle-xmark text-red-400"></i>
+              Not Included
+            </h3>
+            <ul class="space-y-2.5">
+              {pkg.excludes.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                  <i class="fa-solid fa-xmark text-red-400 mt-0.5 flex-shrink-0 text-xs"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Booking CTA -->
+          <div class="bg-[#1a1a1a] rounded-2xl p-6 text-center">
+            <i class="fa-solid fa-headset text-[#C6A75E] text-2xl mb-3 block"></i>
+            <h3 class="font-bold text-white mb-2">Ready to Book?</h3>
+            <p class="text-white/60 text-sm mb-5">Our travel experts are available 24/7 to help you plan.</p>
+            <a
+              href="/booking"
+              class="w-full inline-flex items-center justify-center gap-2 bg-[#C6A75E] hover:bg-[#b2965c]
+                     text-white font-semibold px-6 py-3 rounded-2xl transition-all duration-200 hover:scale-105 text-sm mb-3"
+            >
+              <i class="fa-solid fa-suitcase-rolling"></i>
+              Book This Package
+            </a>
+            <a
+              href="https://wa.me/201021578641"
+              target="_blank"
+              class="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20
+                     border border-white/20 text-white font-semibold px-6 py-3 rounded-2xl transition-all duration-200 text-sm"
+            >
+              <i class="fa-brands fa-whatsapp text-green-400"></i>
+              Ask on WhatsApp
+            </a>
+          </div>
+
+          <!-- Quick Info -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4">Quick Info</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500 flex items-center gap-2">
+                  <i class="fa-regular fa-clock text-[#C6A75E]"></i> Duration
+                </span>
+                <span class="font-medium text-gray-800">{pkg.duration}</span>
+              </div>
+              <div class="w-full h-px bg-gray-100"></div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500 flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot text-[#C6A75E]"></i> Destinations
+                </span>
+                <span class="font-medium text-gray-800">{pkg.locations.join(", ")}</span>
+              </div>
+              <div class="w-full h-px bg-gray-100"></div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500 flex items-center gap-2">
+                  <i class="fa-solid fa-tag text-[#C6A75E]"></i> Price
+                </span>
+                <span class="font-medium text-gray-800">{pkg.price}</span>
+              </div>
+              <div class="w-full h-px bg-gray-100"></div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500 flex items-center gap-2">
+                  <i class="fa-solid fa-map text-[#C6A75E]"></i> Days
+                </span>
+                <span class="font-medium text-gray-800">{pkg.itinerary.length} Days Program</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BACK BUTTON ───────────────────────────────────── -->
+  <div class="bg-[#FAF8F5] pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <a
+        href="/tourism/packages-Egypt-travel"
+        class="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-700
+               font-medium px-8 py-3 rounded-2xl hover:border-[#C6A75E] hover:text-[#C6A75E]
+               transition-all duration-200 shadow-sm"
+      >
+        <i class="fa-solid fa-arrow-left text-sm"></i>
+        Back to All Packages
+      </a>
+    </div>
+  </div>
+
+</BaseLayout>
