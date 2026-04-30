@@ -1,56 +1,56 @@
-<section class="relative w-full overflow-hidden h-[420px]">
+<section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
 
-  <!-- Background Image -->
-  <img
-    src="/images/nile-cruise-hero.webp"
-    alt="Nile Cruise in Egypt"
-    class="absolute inset-0 w-full h-full object-cover object-center"
-    loading="eager"
-  />
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/nile-cruise-hero.webp"
+      alt="Discover Nile Cruise Experience with Lotus Travel"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/75"></div>
+  </div>
 
-  <!-- Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
-
-  <!-- Hero Content -->
-  <div class="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-24 max-w-3xl">
+  <!-- Content -->
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
 
     <!-- Badge -->
-    <div class="mb-3">
-      <span class="bg-[#C8A976]/90 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
-        Nile Cruise Services
+    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+      <i class="fa-solid fa-ship text-[#C6A75E] text-sm"></i>
+      <span class="text-sm font-medium tracking-wide">
+        Luxury Nile Cruise Experience
       </span>
     </div>
 
     <!-- Title -->
-    <h1 class="text-white font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight">
-      Explore the Nile from Luxor to Aswan
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Explore the Nile <br />
+      from Luxor to Aswan
     </h1>
 
     <!-- Description -->
-    <p class="mt-3 text-gray-200 text-sm md:text-base max-w-lg leading-relaxed">
-      Enjoy a relaxing Nile cruise with guided tours, comfortable cabins,
-      and visits to Egypt’s most famous temples between Luxor and Aswan.
-    </p>
+<p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
+  Sail the Nile with Lotus Travel. Enjoy a luxury cruise, guided tours, and iconic temples between Luxor and Aswan.
+</p>
 
     <!-- Buttons -->
-    <div class="mt-5 flex flex-wrap gap-3">
-
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href="#cruise-packages"
-        class="bg-[#C8A976] hover:bg-[#b8954f] transition text-white px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-base font-semibold"
+        class="inline-flex items-center justify-center gap-3 bg-[#C6A75E] text-white font-semibold px-10 py-4 rounded-2xl hover:bg-[#b2965c] hover:scale-105 transition transform duration-300 shadow-xl"
       >
+        <i class="fa-solid fa-magnifying-glass"></i>
         View Packages
       </a>
 
       <a
         href="/contact"
-        class="border border-white text-white hover:bg-white hover:text-black transition px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-base font-semibold"
+        class="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-2xl hover:bg-white/20 hover:scale-105 transition transform duration-300"
       >
+        <i class="fa-solid fa-headset"></i>
         Contact Us
       </a>
-
     </div>
 
   </div>
-
 </section>

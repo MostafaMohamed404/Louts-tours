@@ -39,11 +39,14 @@ export const egyptPackages: Package[] = [
     durationDays: 7,
     price: "$1,250",
     priceNote: "per person",
-    image: "/images/hero-Domestic.webp",
+    image: "/images/khan-el-khalili-night.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2026/02/egypt-4796256_1920-450x300.webp",
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
-      "https://images.unsplash.com/photo-1562521279-a9e47a3bde1e?w=800&q=80",
+      "/images/cairo-sunset.webp",
+      "/images/islamic-cairo-mosques-architecture.webp",
+      "/images/cairo-mosques-sunset.webp",
+      "/images/khan-el-khalili-night-market.webp",
+      "/images/khan-el-khalili-night.webp",
+      "/images/nile-river-sunset-cairo.webp",
     ],
     description:
       "Experience the magic of Egypt — from the iconic Pyramids of Cairo to the crystal-clear waters and coral reefs of Sharm El Sheikh. This 7-day journey blends ancient history with Red Sea luxury.",
