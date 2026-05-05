@@ -1,9 +1,7 @@
 <section class="py-20 bg-[#FAFAF8]">
   <div class="container mx-auto px-6 lg:px-20">
     <div class="text-center mb-14">
-      <span
-        class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold"
-      >
+      <span class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold">
         Trusted By
       </span>
       <h2 class="text-4xl font-bold text-[#3E2F1C] mt-4">
@@ -15,109 +13,62 @@
       </p>
     </div>
 
+    <!-- Desktop -->
     <div class="hidden md:grid grid-cols-3 lg:grid-cols-6 gap-10 items-center">
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo2.webp"
-          alt="Emirates"
-          class="h-12 object-contain"
-        />
-      </a>
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo1.webp"
-          alt="EgyptAir"
-          class="h-12 object-contain"
-        />
-      </a>
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo5.webp"
-          alt="Turkish Airlines"
-          class="h-12 object-contain"
-        />
-      </a>
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo4.webp"
-          alt="Qatar Airways"
-          class="h-14 object-contain"
-        />
-      </a>
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo1.webp"
-          alt="Hilton"
-          class="h-11 object-contain"
-        />
-      </a>
-      <a href="#" class="flex items-center justify-center h-20">
-        <img
-          src="/images/logo5.webp"
-          alt="Booking.com"
-          class="h-11 object-contain"
-        />
-      </a>
-    </div>
-
-    <div class="md:hidden overflow-hidden">
-      <div
-        class="flex gap-16 items-center w-max"
-        style="animation: marquee 18s linear infinite;"
-      >
-        <img
-          src="images/logo1.webp"
-          alt="Emirates"
-          class="h-10 object-contain"
-        />
-        <img
-          src="/images/logo2.webp"
-          alt="EgyptAir"
-          class="h-10 object-contain"
-        />
-        <img
-          src="/images/logo3.webp"
-          alt="Turkish Airlines"
-          class="h-10 object-contain"
-        />
-        <img
-          src="/images/logo4.webp"
-          alt="Qatar Airways"
-          class="h-12 object-contain"
-        />
-        <img src="/images/logo5.webp" alt="Hilton" class="h-9 object-contain" />
-        <img
-          src="/images/logo6.webp"
-          alt="Booking.com"
-          class="h-9 object-contain"
-        />
-        <img
-          src="images/logo1.webp"
-          alt="Emirates"
-          class="h-10 object-contain"
-        />
-        <img
-          src="/images/logo2.webp"
-          alt="EgyptAir"
-          class="h-10 object-contain"
-        />
-        <img
-          src="/images/logo3.webp"
-          alt="Turkish Airlines"
-          class="h-10 object-contain"
-        />
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo2.webp" alt="Emirates"
+          class="h-12 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
+      </div>
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo1.webp" alt="EgyptAir"
+          class="h-12 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
+      </div>
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo5.webp" alt="Turkish Airlines"
+          class="h-12 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
+      </div>
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo4.webp" alt="Qatar Airways"
+          class="h-14 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
+      </div>
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo3.webp" alt="Hilton"
+          class="h-11 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
+      </div>
+      <div class="flex items-center justify-center h-20">
+        <img src="/images/logo6.webp" alt="Booking.com"
+          class="h-11 object-contain opacity-70 hover:opacity-100 hover:scale-105 transition duration-300" />
       </div>
     </div>
+
+    <!-- Mobile Marquee -->
+    <div class="md:hidden overflow-hidden">
+      <div class="flex gap-16 items-center w-max animate-marquee">
+        <img src="/images/logo1.webp" alt="Emirates"   class="h-10 object-contain opacity-70" />
+        <img src="/images/logo2.webp" alt="EgyptAir"   class="h-10 object-contain opacity-70" />
+        <img src="/images/logo3.webp" alt="Turkish"    class="h-10 object-contain opacity-70" />
+        <img src="/images/logo4.webp" alt="Qatar"      class="h-12 object-contain opacity-70" />
+        <img src="/images/logo5.webp" alt="Hilton"     class="h-9  object-contain opacity-70" />
+        <img src="/images/logo6.webp" alt="Booking"    class="h-9  object-contain opacity-70" />
+        <!-- duplicate for seamless loop -->
+        <img src="/images/logo1.webp" alt="Emirates"   class="h-10 object-contain opacity-70" />
+        <img src="/images/logo2.webp" alt="EgyptAir"   class="h-10 object-contain opacity-70" />
+        <img src="/images/logo3.webp" alt="Turkish"    class="h-10 object-contain opacity-70" />
+        <img src="/images/logo4.webp" alt="Qatar"      class="h-12 object-contain opacity-70" />
+        <img src="/images/logo5.webp" alt="Hilton"     class="h-9  object-contain opacity-70" />
+        <img src="/images/logo6.webp" alt="Booking"    class="h-9  object-contain opacity-70" />
+      </div>
+    </div>
+
   </div>
 </section>
 
 <style>
   @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
   }
 </style>

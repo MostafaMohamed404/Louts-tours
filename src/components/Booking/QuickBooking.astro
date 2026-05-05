@@ -14,7 +14,9 @@
     <!-- Form Card -->
     <div class="bg-[#F8F5EF] rounded-3xl shadow-lg p-8 md:p-12">
 
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="hidden" name="form-name" value="booking" />
+        <p class="hidden"><input name="bot-field" /></p>
 
         <!-- Full Name -->
         <div>

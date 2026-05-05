@@ -77,43 +77,77 @@ export const egyptPackages: Package[] = [
       {
         day: 1,
         title: "Arrival in Cairo",
-        description: "Arrive at Cairo International Airport. Meet & greet by our representative, transfer to your 5★ hotel.",
-        activities: ["Airport Meet & Greet", "Hotel Check-in", "Welcome Briefing"],
+        description:
+          "Arrive at Cairo International Airport. Meet & greet by our representative, transfer to your 5★ hotel.",
+        activities: [
+          "Airport Meet & Greet",
+          "Hotel Check-in",
+          "Welcome Briefing",
+        ],
       },
       {
         day: 2,
         title: "Giza Pyramids & Grand Egyptian Museum",
-        description: "Full day exploring the Giza Plateau — the Great Pyramids, Great Sphinx, and the Grand Egyptian Museum featuring Tutankhamun's treasures.",
-        activities: ["Great Pyramid of Khufu", "Great Sphinx", "Grand Egyptian Museum (GEM)", "Camel Ride (Optional)"],
+        description:
+          "Full day exploring the Giza Plateau — the Great Pyramids, Great Sphinx, and the Grand Egyptian Museum featuring Tutankhamun's treasures.",
+        activities: [
+          "Great Pyramid of Khufu",
+          "Great Sphinx",
+          "Grand Egyptian Museum (GEM)",
+          "Camel Ride (Optional)",
+        ],
       },
       {
         day: 3,
         title: "Cairo City Tour",
-        description: "Explore Cairo's historical highlights — the Egyptian Museum, Khan El Khalili Bazaar, and the Citadel of Saladin.",
-        activities: ["Egyptian Museum", "Khan El Khalili Bazaar", "Citadel of Saladin", "Mohamed Ali Mosque"],
+        description:
+          "Explore Cairo's historical highlights — the Egyptian Museum, Khan El Khalili Bazaar, and the Citadel of Saladin.",
+        activities: [
+          "Egyptian Museum",
+          "Khan El Khalili Bazaar",
+          "Citadel of Saladin",
+          "Mohamed Ali Mosque",
+        ],
       },
       {
         day: 4,
         title: "Flight to Sharm El Sheikh",
-        description: "Morning flight to Sharm El Sheikh. Check in to your Red Sea resort and enjoy the afternoon at leisure.",
-        activities: ["Domestic Flight Cairo → Sharm", "Resort Check-in", "Beach Relaxation"],
+        description:
+          "Morning flight to Sharm El Sheikh. Check in to your Red Sea resort and enjoy the afternoon at leisure.",
+        activities: [
+          "Domestic Flight Cairo → Sharm",
+          "Resort Check-in",
+          "Beach Relaxation",
+        ],
       },
       {
         day: 5,
         title: "St. Catherine Monastery",
-        description: "Early morning excursion to the legendary St. Catherine Monastery at the foot of Mount Sinai.",
-        activities: ["St. Catherine Monastery", "Moses Mountain (Optional)", "Bedouin Village Visit"],
+        description:
+          "Early morning excursion to the legendary St. Catherine Monastery at the foot of Mount Sinai.",
+        activities: [
+          "St. Catherine Monastery",
+          "Moses Mountain (Optional)",
+          "Bedouin Village Visit",
+        ],
       },
       {
         day: 6,
         title: "Ras Mohamed & Red Sea",
-        description: "Full day at Ras Mohamed National Park — one of the world's top snorkeling and diving destinations.",
-        activities: ["Ras Mohamed National Park", "Snorkeling / Diving", "White Canyon", "Free Beach Time"],
+        description:
+          "Full day at Ras Mohamed National Park — one of the world's top snorkeling and diving destinations.",
+        activities: [
+          "Ras Mohamed National Park",
+          "Snorkeling / Diving",
+          "White Canyon",
+          "Free Beach Time",
+        ],
       },
       {
         day: 7,
         title: "Departure",
-        description: "Breakfast at the hotel, transfer to Sharm El Sheikh Airport for your departure flight.",
+        description:
+          "Breakfast at the hotel, transfer to Sharm El Sheikh Airport for your departure flight.",
         activities: ["Breakfast", "Hotel Check-out", "Airport Transfer"],
       },
     ],
@@ -131,11 +165,14 @@ export const egyptPackages: Package[] = [
     durationDays: 9,
     price: "$1,850",
     priceNote: "per person",
-    image: "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
+    image: "/images/cairo.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
-      "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
-      "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=800&q=80",
+      "/images/cairo-giza-pyramids-sphinx.webp",
+      "/images/alexandria-bibliotheca-mediterranean.webp",
+      "/images/nile-cruise-aswan-to-luxor.webp",
+      "/images/luxor-karnak-temple-columns.webp",
+      "/images/aswan-philae-temple-nile.webp",
+      "/images/hurghada-red-sea-resort-beach.webp",
     ],
     description:
       "A 9-day adventure through Egypt's greatest wonders — the Pyramids of Cairo, Alexandria by the Mediterranean, a 3-night Nile Cruise from Aswan to Luxor, and relaxation by the Red Sea in Hurghada.",
@@ -174,49 +211,88 @@ export const egyptPackages: Package[] = [
       {
         day: 2,
         title: "Cairo — Pyramids & GEM",
-        description: "Explore Giza Pyramids, the Great Sphinx, and the Grand Egyptian Museum.",
-        activities: ["Great Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum"],
+        description:
+          "Explore Giza Pyramids, the Great Sphinx, and the Grand Egyptian Museum.",
+        activities: [
+          "Great Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+        ],
       },
       {
         day: 3,
         title: "Cairo → Alexandria",
-        description: "Day trip to Alexandria — the Mediterranean jewel of Egypt.",
-        activities: ["Bibliotheca Alexandrina", "Qaitbay Citadel", "Catacombs of Kom el Shoqafa", "Mediterranean Seafront"],
+        description:
+          "Day trip to Alexandria — the Mediterranean jewel of Egypt.",
+        activities: [
+          "Bibliotheca Alexandrina",
+          "Qaitbay Citadel",
+          "Catacombs of Kom el Shoqafa",
+          "Mediterranean Seafront",
+        ],
       },
       {
         day: 4,
         title: "Flight Cairo → Aswan & Nile Cruise Embarkation",
         description: "Fly to Aswan and board your 5★ Nile Cruise ship.",
-        activities: ["Flight Cairo → Aswan", "Philae Temple", "Aswan High Dam", "Nile Cruise Embarkation"],
+        activities: [
+          "Flight Cairo → Aswan",
+          "Philae Temple",
+          "Aswan High Dam",
+          "Nile Cruise Embarkation",
+        ],
       },
       {
         day: 5,
         title: "Abu Simbel (Optional) & Kom Ombo",
-        description: "Optional early morning excursion to Abu Simbel, then cruise to Kom Ombo Temple.",
-        activities: ["Abu Simbel Temples (Optional)", "Kom Ombo Temple", "Nile Sailing"],
+        description:
+          "Optional early morning excursion to Abu Simbel, then cruise to Kom Ombo Temple.",
+        activities: [
+          "Abu Simbel Temples (Optional)",
+          "Kom Ombo Temple",
+          "Nile Sailing",
+        ],
       },
       {
         day: 6,
         title: "Edfu Temple & Cruise to Luxor",
-        description: "Visit the magnificent Temple of Horus at Edfu, then continue sailing to Luxor.",
-        activities: ["Temple of Horus at Edfu", "Nile Cruise Sailing", "Arrive Luxor"],
+        description:
+          "Visit the magnificent Temple of Horus at Edfu, then continue sailing to Luxor.",
+        activities: [
+          "Temple of Horus at Edfu",
+          "Nile Cruise Sailing",
+          "Arrive Luxor",
+        ],
       },
       {
         day: 7,
         title: "Luxor — Valley of the Kings & West Bank",
-        description: "Explore Luxor's legendary West Bank — Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
-        activities: ["Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon", "Nile Cruise Disembarkation"],
+        description:
+          "Explore Luxor's legendary West Bank — Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+          "Nile Cruise Disembarkation",
+        ],
       },
       {
         day: 8,
         title: "Luxor → Hurghada",
-        description: "Visit Karnak and Luxor Temples in the morning, then transfer to Hurghada for beach relaxation.",
-        activities: ["Karnak Temple Complex", "Luxor Temple", "Transfer to Hurghada", "Beach Check-in"],
+        description:
+          "Visit Karnak and Luxor Temples in the morning, then transfer to Hurghada for beach relaxation.",
+        activities: [
+          "Karnak Temple Complex",
+          "Luxor Temple",
+          "Transfer to Hurghada",
+          "Beach Check-in",
+        ],
       },
       {
         day: 9,
         title: "Departure from Hurghada",
-        description: "Enjoy a final morning by the Red Sea, then transfer to Hurghada Airport.",
+        description:
+          "Enjoy a final morning by the Red Sea, then transfer to Hurghada Airport.",
         activities: ["Beach Leisure", "Hotel Check-out", "Airport Transfer"],
       },
     ],
@@ -234,11 +310,13 @@ export const egyptPackages: Package[] = [
     durationDays: 5,
     price: "$900",
     priceNote: "per person",
-    image: "https://castletours.net/wp-content/uploads/2025/10/4650f80992e4982793d5b89b01f251f2.jpg",
+    image: "/images/alexandria-bibliotheca-modern-building.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2025/10/4650f80992e4982793d5b89b01f251f2.jpg",
-      "https://castletours.net/wp-content/uploads/2025/10/e3e4b92772a00bf08922a79dd5a874d7-Giza.jpg",
-      "https://images.unsplash.com/photo-1477894880577-8b2f87157e26?w=800&q=80",
+      "/images/luxor-valley-of-kings-entrance.webp",
+      "/images/luxor-temple-night-lights.webp",
+      "/images/alexandria-qaitbay-citadel-sea-view.webp",
+      "/images/alexandria-bibliotheca-modern-building.webp",
+      "/images/cairo-sphinx-close-up.webp",
     ],
     description:
       "Trace the footsteps of ancient pharaohs in 5 days — Giza Pyramids, the Grand Egyptian Museum, a day trip to Alexandria by the Mediterranean, and the grand temples of Luxor and Karnak.",
@@ -268,32 +346,61 @@ export const egyptPackages: Package[] = [
       {
         day: 1,
         title: "Arrival in Cairo",
-        description: "Arrive at Cairo Airport, meet & greet, transfer to 5★ hotel.",
-        activities: ["Airport Pick-up", "Hotel Check-in", "Welcome Orientation"],
+        description:
+          "Arrive at Cairo Airport, meet & greet, transfer to 5★ hotel.",
+        activities: [
+          "Airport Pick-up",
+          "Hotel Check-in",
+          "Welcome Orientation",
+        ],
       },
       {
         day: 2,
         title: "Giza Pyramids & Grand Egyptian Museum",
-        description: "Full day at Giza — the Great Pyramids, Great Sphinx, and the brand-new Grand Egyptian Museum.",
-        activities: ["Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum", "Saqqara (Optional)"],
+        description:
+          "Full day at Giza — the Great Pyramids, Great Sphinx, and the brand-new Grand Egyptian Museum.",
+        activities: [
+          "Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+          "Saqqara (Optional)",
+        ],
       },
       {
         day: 3,
         title: "Day Trip to Alexandria",
-        description: "Drive to Alexandria for a day of Mediterranean history and culture.",
-        activities: ["Bibliotheca Alexandrina", "Qaitbay Citadel", "Pompey's Pillar", "Alexandria Corniche"],
+        description:
+          "Drive to Alexandria for a day of Mediterranean history and culture.",
+        activities: [
+          "Bibliotheca Alexandrina",
+          "Qaitbay Citadel",
+          "Pompey's Pillar",
+          "Alexandria Corniche",
+        ],
       },
       {
         day: 4,
         title: "Flight to Luxor — West Bank",
-        description: "Fly to Luxor and explore the legendary West Bank necropolis.",
-        activities: ["Flight Cairo → Luxor", "Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"],
+        description:
+          "Fly to Luxor and explore the legendary West Bank necropolis.",
+        activities: [
+          "Flight Cairo → Luxor",
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
       },
       {
         day: 5,
         title: "Luxor East Bank & Departure",
-        description: "Morning visit to Karnak and Luxor Temples, then fly back to Cairo for departure.",
-        activities: ["Karnak Temple", "Luxor Temple", "Flight Luxor → Cairo", "Departure"],
+        description:
+          "Morning visit to Karnak and Luxor Temples, then fly back to Cairo for departure.",
+        activities: [
+          "Karnak Temple",
+          "Luxor Temple",
+          "Flight Luxor → Cairo",
+          "Departure",
+        ],
       },
     ],
   },
@@ -310,11 +417,13 @@ export const egyptPackages: Package[] = [
     durationDays: 5,
     price: "$950",
     priceNote: "per person",
-    image: "https://castletours.net/wp-content/uploads/2025/10/e3e4b92772a00bf08922a79dd5a874d7-Giza.jpg",
+    image: "/images/luxor-temple-night-lights.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2025/10/e3e4b92772a00bf08922a79dd5a874d7-Giza.jpg",
-      "https://castletours.net/wp-content/uploads/2025/10/4650f80992e4982793d5b89b01f251f2.jpg",
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80",
+      "/images/luxor-temple-night-lights.webp",
+      "/images/cairo-citadel-mohamed-ali-mosque.webp",
+      "/images/luxor-valley-of-the-kings.webp",
+      "/images/luxor-balloon.webp",
+      "/images/khan-el-khalili-night.webp",
     ],
     description:
       "Egypt's most iconic treasures in one journey — stand before the Giza Pyramids, explore the Grand Egyptian Museum, then travel to Luxor, the world's greatest open-air museum.",
@@ -350,26 +459,47 @@ export const egyptPackages: Package[] = [
       {
         day: 2,
         title: "Giza Pyramids & GEM",
-        description: "Explore the iconic Giza Plateau and the Grand Egyptian Museum.",
-        activities: ["Great Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum"],
+        description:
+          "Explore the iconic Giza Plateau and the Grand Egyptian Museum.",
+        activities: [
+          "Great Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+        ],
       },
       {
         day: 3,
         title: "Cairo City Highlights",
-        description: "Discover Cairo's historic core — the Egyptian Museum, Old Cairo, and Khan El Khalili.",
-        activities: ["Egyptian Museum", "Old Cairo Coptic Churches", "Khan El Khalili Bazaar"],
+        description:
+          "Discover Cairo's historic core — the Egyptian Museum, Old Cairo, and Khan El Khalili.",
+        activities: [
+          "Egyptian Museum",
+          "Old Cairo Coptic Churches",
+          "Khan El Khalili Bazaar",
+        ],
       },
       {
         day: 4,
         title: "Flight to Luxor — West Bank",
-        description: "Morning flight to Luxor, afternoon exploring the West Bank.",
-        activities: ["Flight Cairo → Luxor", "Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"],
+        description:
+          "Morning flight to Luxor, afternoon exploring the West Bank.",
+        activities: [
+          "Flight Cairo → Luxor",
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
       },
       {
         day: 5,
         title: "Luxor East Bank & Departure",
         description: "Visit Karnak and Luxor Temples then fly back to Cairo.",
-        activities: ["Karnak Temple", "Luxor Temple", "Flight Luxor → Cairo", "Departure"],
+        activities: [
+          "Karnak Temple",
+          "Luxor Temple",
+          "Flight Luxor → Cairo",
+          "Departure",
+        ],
       },
     ],
   },
@@ -386,12 +516,15 @@ export const egyptPackages: Package[] = [
     durationDays: 6,
     price: "$1,050",
     priceNote: "per person",
-    image: "https://castletours.net/wp-content/uploads/2025/10/Bahariya-Oasis.jpg",
+    image: "/images/bahariya-oasis-palm-trees.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2025/10/Bahariya-Oasis.jpg",
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
-      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "/images/white-desert-mushroom-rocks.webp",
+      "/images/bahariya-oasis-palm-trees.webp",
+      "/images/bahariya-oasis-natural-springs.webp",
+      "/images/white-desert-egypt-rock-formations.webp",
+      "/images/cairo-sphinx-close-up.webp",
     ],
+
     description:
       "Ancient history meets thrilling desert landscapes — explore Cairo's iconic Pyramids and GEM then venture deep into the Egyptian desert for quad biking, camel rides, and a magical Bedouin dinner under the stars.",
     highlights: [
@@ -427,31 +560,54 @@ export const egyptPackages: Package[] = [
       {
         day: 2,
         title: "Giza Pyramids & Grand Egyptian Museum",
-        description: "Full day exploring the Giza Plateau and the brand-new Grand Egyptian Museum.",
-        activities: ["Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum"],
+        description:
+          "Full day exploring the Giza Plateau and the brand-new Grand Egyptian Museum.",
+        activities: [
+          "Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+        ],
       },
       {
         day: 3,
         title: "Cairo to Bahariya Oasis",
-        description: "Drive to Bahariya Oasis and explore the Black Desert and Crystal Mountain.",
-        activities: ["Drive to Bahariya (4 hrs)", "Black Desert", "Crystal Mountain", "Desert Camp Check-in"],
+        description:
+          "Drive to Bahariya Oasis and explore the Black Desert and Crystal Mountain.",
+        activities: [
+          "Drive to Bahariya (4 hrs)",
+          "Black Desert",
+          "Crystal Mountain",
+          "Desert Camp Check-in",
+        ],
       },
       {
         day: 4,
         title: "White Desert National Park",
-        description: "Explore the surreal White Desert — giant chalk formations shaped like mushrooms and icebergs.",
-        activities: ["White Desert National Park", "Quad Biking (Optional)", "Camel Ride", "Bedouin Dinner & Stargazing"],
+        description:
+          "Explore the surreal White Desert — giant chalk formations shaped like mushrooms and icebergs.",
+        activities: [
+          "White Desert National Park",
+          "Quad Biking (Optional)",
+          "Camel Ride",
+          "Bedouin Dinner & Stargazing",
+        ],
       },
       {
         day: 5,
         title: "Return to Cairo",
-        description: "Morning in the oasis then drive back to Cairo. Afternoon at leisure.",
-        activities: ["Oasis Springs Visit", "Drive Back to Cairo", "Khan El Khalili (Optional)"],
+        description:
+          "Morning in the oasis then drive back to Cairo. Afternoon at leisure.",
+        activities: [
+          "Oasis Springs Visit",
+          "Drive Back to Cairo",
+          "Khan El Khalili (Optional)",
+        ],
       },
       {
         day: 6,
         title: "Departure",
-        description: "Breakfast at hotel, transfer to Cairo International Airport.",
+        description:
+          "Breakfast at hotel, transfer to Cairo International Airport.",
         activities: ["Breakfast", "Hotel Check-out", "Airport Transfer"],
       },
     ],
@@ -469,12 +625,15 @@ export const egyptPackages: Package[] = [
     durationDays: 7,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://castletours.net/wp-content/uploads/2025/10/5eff48_85d852fc46aa40288ca187a57aab19efmv2.jpg.avif",
+    image: "/images/luxor-temple-.webp",
     gallery: [
-      "https://castletours.net/wp-content/uploads/2025/10/5eff48_85d852fc46aa40288ca187a57aab19efmv2.jpg.avif",
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
-      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80",
+      "/images/hurghada-red-sea-beach.webp",
+      "/images/hurghada-snorkeling-coral-reef.webp",
+      "/images/hurghada-desert-safari-quad.webp",
+      "/images/luxor-balloon.webp",
+      "/images/luxor-temple-.webp",
     ],
+
     description:
       "The perfect blend of ancient wonders and Red Sea luxury — explore Cairo's Pyramids and the Grand Egyptian Museum, visit Luxor's timeless temples, then unwind on the stunning beaches of Hurghada.",
     highlights: [
@@ -511,7 +670,11 @@ export const egyptPackages: Package[] = [
         day: 2,
         title: "Giza Pyramids & Grand Egyptian Museum",
         description: "Explore the Giza Plateau and the Grand Egyptian Museum.",
-        activities: ["Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum"],
+        activities: [
+          "Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+        ],
       },
       {
         day: 3,
@@ -523,19 +686,33 @@ export const egyptPackages: Package[] = [
         day: 4,
         title: "Flight to Luxor — West Bank",
         description: "Fly to Luxor and explore the West Bank monuments.",
-        activities: ["Flight Cairo → Luxor", "Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"],
+        activities: [
+          "Flight Cairo → Luxor",
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
       },
       {
         day: 5,
         title: "Luxor East Bank & Transfer to Hurghada",
         description: "Morning temples then transfer to Hurghada by road.",
-        activities: ["Karnak Temple", "Luxor Temple", "Transfer to Hurghada (3 hrs)"],
+        activities: [
+          "Karnak Temple",
+          "Luxor Temple",
+          "Transfer to Hurghada (3 hrs)",
+        ],
       },
       {
         day: 6,
         title: "Red Sea Day",
-        description: "Full day at leisure by the Red Sea — beach, snorkeling, and water sports.",
-        activities: ["Beach Relaxation", "Snorkeling Trip", "Water Sports (Optional)"],
+        description:
+          "Full day at leisure by the Red Sea — beach, snorkeling, and water sports.",
+        activities: [
+          "Beach Relaxation",
+          "Snorkeling Trip",
+          "Water Sports (Optional)",
+        ],
       },
       {
         day: 7,
@@ -558,11 +735,13 @@ export const egyptPackages: Package[] = [
     durationDays: 7,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80",
+    image: "/images/hurghada-red-sea-beach.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80",
-      "https://images.unsplash.com/photo-1477894880577-8b2f87157e26?w=800&q=80",
-      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "/images/attraction.webp",
+      "/images/about-sharm.webp",
+      "/images/hurghada-desert-safari-quad.webp",
+      "/images/luxor-balloon.webp",
+      "/images/luxor-temple-.webp",
     ],
     description:
       "Egypt's best in one trip — the Pyramids of Giza, Valley of the Kings in Luxor, and the warm turquoise waters of Hurghada all in 7 unforgettable days.",
@@ -599,13 +778,21 @@ export const egyptPackages: Package[] = [
         day: 2,
         title: "Pyramids & GEM",
         description: "Giza Pyramids, Sphinx, and Grand Egyptian Museum.",
-        activities: ["Pyramids of Giza", "Great Sphinx", "Grand Egyptian Museum"],
+        activities: [
+          "Pyramids of Giza",
+          "Great Sphinx",
+          "Grand Egyptian Museum",
+        ],
       },
       {
         day: 3,
         title: "Cairo Sightseeing",
         description: "Egyptian Museum, Citadel, and Khan El Khalili.",
-        activities: ["Egyptian Museum", "Citadel of Saladin", "Khan El Khalili"],
+        activities: [
+          "Egyptian Museum",
+          "Citadel of Saladin",
+          "Khan El Khalili",
+        ],
       },
       {
         day: 4,
@@ -616,14 +803,23 @@ export const egyptPackages: Package[] = [
       {
         day: 5,
         title: "Luxor West Bank",
-        description: "Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
-        activities: ["Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"],
+        description:
+          "Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
       },
       {
         day: 6,
         title: "Luxor → Hurghada & Beach Day",
         description: "Transfer to Hurghada and enjoy the Red Sea.",
-        activities: ["Transfer Luxor → Hurghada", "Beach & Snorkeling", "Resort Check-in"],
+        activities: [
+          "Transfer Luxor → Hurghada",
+          "Beach & Snorkeling",
+          "Resort Check-in",
+        ],
       },
       {
         day: 7,
@@ -646,11 +842,13 @@ export const egyptPackages: Package[] = [
     durationDays: 8,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=600&q=80",
+    image: "/images/cairo-nile-river-sunset.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
-      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80",
-      "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=800&q=80",
+      "/images/cairo-nile-river-sunset.webp",
+      "/images/attraction.webp",
+      "/images/about-sharm.webp",
+      "/images/hurghada-desert-safari-quad.webp",
+      "/images/cairo-grand-egyptian-museum.webp",
     ],
     description:
       "8 days across Egypt's legendary destinations — Cairo's ancient wonders, a Nile experience in Luxor, and relaxation by the Red Sea in Hurghada. The perfect balanced Egypt tour.",
@@ -676,14 +874,62 @@ export const egyptPackages: Package[] = [
       "Personal Expenses",
     ],
     itinerary: [
-      { day: 1, title: "Arrival Cairo", description: "Arrive and check in.", activities: ["Airport Pick-up", "Hotel Check-in"] },
-      { day: 2, title: "Pyramids & GEM", description: "Full day Giza and GEM.", activities: ["Pyramids", "Sphinx", "GEM"] },
-      { day: 3, title: "Cairo Highlights", description: "Egyptian Museum, Old Cairo, Bazaar.", activities: ["Egyptian Museum", "Coptic Cairo", "Khan El Khalili"] },
-      { day: 4, title: "Cairo Free Day", description: "Optional city tour or shopping.", activities: ["Leisure / Optional Tours"] },
-      { day: 5, title: "Flight to Luxor — East Bank", description: "Fly to Luxor, Karnak & Luxor Temples.", activities: ["Flight Cairo → Luxor", "Karnak Temple", "Luxor Temple"] },
-      { day: 6, title: "Luxor West Bank", description: "Valley of the Kings and West Bank highlights.", activities: ["Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"] },
-      { day: 7, title: "Luxor → Hurghada", description: "Transfer to Hurghada, beach day.", activities: ["Transfer to Hurghada", "Red Sea Beach", "Resort Check-in"] },
-      { day: 8, title: "Departure", description: "Airport transfer.", activities: ["Breakfast", "Check-out", "Airport Transfer"] },
+      {
+        day: 1,
+        title: "Arrival Cairo",
+        description: "Arrive and check in.",
+        activities: ["Airport Pick-up", "Hotel Check-in"],
+      },
+      {
+        day: 2,
+        title: "Pyramids & GEM",
+        description: "Full day Giza and GEM.",
+        activities: ["Pyramids", "Sphinx", "GEM"],
+      },
+      {
+        day: 3,
+        title: "Cairo Highlights",
+        description: "Egyptian Museum, Old Cairo, Bazaar.",
+        activities: ["Egyptian Museum", "Coptic Cairo", "Khan El Khalili"],
+      },
+      {
+        day: 4,
+        title: "Cairo Free Day",
+        description: "Optional city tour or shopping.",
+        activities: ["Leisure / Optional Tours"],
+      },
+      {
+        day: 5,
+        title: "Flight to Luxor — East Bank",
+        description: "Fly to Luxor, Karnak & Luxor Temples.",
+        activities: ["Flight Cairo → Luxor", "Karnak Temple", "Luxor Temple"],
+      },
+      {
+        day: 6,
+        title: "Luxor West Bank",
+        description: "Valley of the Kings and West Bank highlights.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
+      },
+      {
+        day: 7,
+        title: "Luxor → Hurghada",
+        description: "Transfer to Hurghada, beach day.",
+        activities: [
+          "Transfer to Hurghada",
+          "Red Sea Beach",
+          "Resort Check-in",
+        ],
+      },
+      {
+        day: 8,
+        title: "Departure",
+        description: "Airport transfer.",
+        activities: ["Breakfast", "Check-out", "Airport Transfer"],
+      },
     ],
   },
 
@@ -699,11 +945,13 @@ export const egyptPackages: Package[] = [
     durationDays: 8,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1562521279-a9e47a3bde1e?w=600&q=80",
+    image: "/images/dahab-blue-hole-diving.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1562521279-a9e47a3bde1e?w=800&q=80",
-      "https://castletours.net/wp-content/uploads/2026/02/egypt-4796256_1920-450x300.webp",
-      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "/images/cairo-giza-pyramids-sphinx.webp",
+      "/images/sharm-el-sheikh-red-sea-resort.webp",
+      "/images/sharm-el-sheikh-snorkeling-coral-reef.webp",
+      "/images/dahab-lagoon-kitesurfing.webp",
+      "/images/cairo-giza-pyramids-sphinx.webp",
     ],
     description:
       "History meets paradise — explore Cairo's ancient icons then escape to the turquoise shores of Sharm El Sheikh and the bohemian charm of Dahab.",
@@ -731,14 +979,71 @@ export const egyptPackages: Package[] = [
       "Personal Expenses",
     ],
     itinerary: [
-      { day: 1, title: "Arrival Cairo", description: "Arrive and check in.", activities: ["Airport Pick-up", "Hotel Check-in"] },
-      { day: 2, title: "Pyramids & GEM", description: "Giza Plateau and Grand Egyptian Museum.", activities: ["Pyramids", "Sphinx", "GEM"] },
-      { day: 3, title: "Cairo Sightseeing", description: "Egyptian Museum, Citadel, Bazaar.", activities: ["Egyptian Museum", "Citadel", "Khan El Khalili"] },
-      { day: 4, title: "Flight to Sharm El Sheikh", description: "Fly to Sharm, resort check-in.", activities: ["Flight Cairo → Sharm", "Resort Check-in", "Beach Leisure"] },
-      { day: 5, title: "Sharm Beach & Water Activities", description: "Full day Red Sea activities.", activities: ["Naama Bay", "Snorkeling / Diving", "Ras Mohamed (Optional)"] },
-      { day: 6, title: "Day Trip to Dahab", description: "Explore the laid-back town of Dahab and its famous Blue Hole.", activities: ["Drive to Dahab", "Blue Hole Snorkeling/Diving", "Dahab Town Stroll"] },
-      { day: 7, title: "St. Catherine Monastery", description: "Early morning excursion to St. Catherine.", activities: ["St. Catherine Monastery", "Moses Mountain (Optional)", "Return to Sharm"] },
-      { day: 8, title: "Departure", description: "Transfer to Sharm El Sheikh Airport.", activities: ["Breakfast", "Check-out", "Airport Transfer"] },
+      {
+        day: 1,
+        title: "Arrival Cairo",
+        description: "Arrive and check in.",
+        activities: ["Airport Pick-up", "Hotel Check-in"],
+      },
+      {
+        day: 2,
+        title: "Pyramids & GEM",
+        description: "Giza Plateau and Grand Egyptian Museum.",
+        activities: ["Pyramids", "Sphinx", "GEM"],
+      },
+      {
+        day: 3,
+        title: "Cairo Sightseeing",
+        description: "Egyptian Museum, Citadel, Bazaar.",
+        activities: ["Egyptian Museum", "Citadel", "Khan El Khalili"],
+      },
+      {
+        day: 4,
+        title: "Flight to Sharm El Sheikh",
+        description: "Fly to Sharm, resort check-in.",
+        activities: [
+          "Flight Cairo → Sharm",
+          "Resort Check-in",
+          "Beach Leisure",
+        ],
+      },
+      {
+        day: 5,
+        title: "Sharm Beach & Water Activities",
+        description: "Full day Red Sea activities.",
+        activities: [
+          "Naama Bay",
+          "Snorkeling / Diving",
+          "Ras Mohamed (Optional)",
+        ],
+      },
+      {
+        day: 6,
+        title: "Day Trip to Dahab",
+        description:
+          "Explore the laid-back town of Dahab and its famous Blue Hole.",
+        activities: [
+          "Drive to Dahab",
+          "Blue Hole Snorkeling/Diving",
+          "Dahab Town Stroll",
+        ],
+      },
+      {
+        day: 7,
+        title: "St. Catherine Monastery",
+        description: "Early morning excursion to St. Catherine.",
+        activities: [
+          "St. Catherine Monastery",
+          "Moses Mountain (Optional)",
+          "Return to Sharm",
+        ],
+      },
+      {
+        day: 8,
+        title: "Departure",
+        description: "Transfer to Sharm El Sheikh Airport.",
+        activities: ["Breakfast", "Check-out", "Airport Transfer"],
+      },
     ],
   },
 
@@ -754,11 +1059,13 @@ export const egyptPackages: Package[] = [
     durationDays: 8,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&q=80",
+    image: "/images/aswan-nile-islands.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
-      "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=800&q=80",
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
+      "/images/aswan-nile-islands.webp",
+      "/images/hurghada-clear-water.webp",
+      "/images/luxor-ancient-temple.webp",
+      "/images/egypt-travel-experience.webp",
+      "/images/cairo-city-view.webp",
     ],
     description:
       "A journey of history and luxury — discover Cairo's icons, sail the Nile in style from Luxor to Aswan, and finish with sun-drenched days on Hurghada's Red Sea coast.",
@@ -784,14 +1091,71 @@ export const egyptPackages: Package[] = [
       "Personal Expenses",
     ],
     itinerary: [
-      { day: 1, title: "Arrival Cairo", description: "Arrive and check in.", activities: ["Airport Pick-up", "Hotel Check-in"] },
-      { day: 2, title: "Pyramids & GEM", description: "Giza and Grand Egyptian Museum.", activities: ["Pyramids", "Sphinx", "GEM"] },
-      { day: 3, title: "Flight to Luxor & Cruise Embarkation", description: "Fly to Luxor, board Nile Cruise.", activities: ["Flight Cairo → Luxor", "Karnak Temple", "Nile Cruise Embarkation"] },
-      { day: 4, title: "Luxor West Bank", description: "Valley of the Kings and Hatshepsut Temple.", activities: ["Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"] },
-      { day: 5, title: "Edfu & Kom Ombo", description: "Temple of Horus and Kom Ombo while sailing.", activities: ["Temple of Horus Edfu", "Kom Ombo Temple", "Nile Sailing"] },
-      { day: 6, title: "Aswan", description: "Philae Temple, Aswan High Dam, Nubian Village.", activities: ["Philae Temple", "Aswan High Dam", "Nubian Village", "Felucca Ride"] },
-      { day: 7, title: "Aswan → Hurghada", description: "Disembark and transfer to Hurghada.", activities: ["Cruise Disembarkation", "Transfer Aswan → Hurghada", "Beach Check-in"] },
-      { day: 8, title: "Departure", description: "Transfer to Hurghada Airport.", activities: ["Beach Leisure", "Check-out", "Airport Transfer"] },
+      {
+        day: 1,
+        title: "Arrival Cairo",
+        description: "Arrive and check in.",
+        activities: ["Airport Pick-up", "Hotel Check-in"],
+      },
+      {
+        day: 2,
+        title: "Pyramids & GEM",
+        description: "Giza and Grand Egyptian Museum.",
+        activities: ["Pyramids", "Sphinx", "GEM"],
+      },
+      {
+        day: 3,
+        title: "Flight to Luxor & Cruise Embarkation",
+        description: "Fly to Luxor, board Nile Cruise.",
+        activities: [
+          "Flight Cairo → Luxor",
+          "Karnak Temple",
+          "Nile Cruise Embarkation",
+        ],
+      },
+      {
+        day: 4,
+        title: "Luxor West Bank",
+        description: "Valley of the Kings and Hatshepsut Temple.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
+      },
+      {
+        day: 5,
+        title: "Edfu & Kom Ombo",
+        description: "Temple of Horus and Kom Ombo while sailing.",
+        activities: ["Temple of Horus Edfu", "Kom Ombo Temple", "Nile Sailing"],
+      },
+      {
+        day: 6,
+        title: "Aswan",
+        description: "Philae Temple, Aswan High Dam, Nubian Village.",
+        activities: [
+          "Philae Temple",
+          "Aswan High Dam",
+          "Nubian Village",
+          "Felucca Ride",
+        ],
+      },
+      {
+        day: 7,
+        title: "Aswan → Hurghada",
+        description: "Disembark and transfer to Hurghada.",
+        activities: [
+          "Cruise Disembarkation",
+          "Transfer Aswan → Hurghada",
+          "Beach Check-in",
+        ],
+      },
+      {
+        day: 8,
+        title: "Departure",
+        description: "Transfer to Hurghada Airport.",
+        activities: ["Beach Leisure", "Check-out", "Airport Transfer"],
+      },
     ],
   },
 
@@ -807,11 +1171,13 @@ export const egyptPackages: Package[] = [
     durationDays: 9,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=600&q=80",
+    image: "/images/egypt-travel-experience.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=800&q=80",
-      "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
-      "https://castletours.net/wp-content/uploads/2025/10/camel-and-the-pyramids.webp",
+      "/images/egypt-travel-experience.webp",
+      "/images/about-luxor.webp",
+      "/images/nubian-village.webp",
+      "/images/valley-of-kings.webp",
+      "/images/aswan-philae-temple-nile.webp",
     ],
     description:
       "The ultimate Egypt experience — Cairo, a full Nile Cruise from Luxor to Aswan, the legendary Abu Simbel temples, and a relaxing finale by the Red Sea.",
@@ -837,15 +1203,72 @@ export const egyptPackages: Package[] = [
       "Personal Expenses",
     ],
     itinerary: [
-      { day: 1, title: "Arrival Cairo", description: "Arrive and check in.", activities: ["Airport Pick-up", "Hotel Check-in"] },
-      { day: 2, title: "Pyramids & GEM", description: "Giza and Grand Egyptian Museum.", activities: ["Pyramids", "Sphinx", "GEM"] },
-      { day: 3, title: "Cairo → Luxor, Cruise Embarkation", description: "Fly to Luxor and board cruise.", activities: ["Flight Cairo → Luxor", "Luxor Temple", "Cruise Embarkation"] },
-      { day: 4, title: "Luxor West Bank", description: "Valley of the Kings and Hatshepsut.", activities: ["Valley of the Kings", "Hatshepsut Temple", "Colossi of Memnon"] },
-      { day: 5, title: "Edfu & Kom Ombo", description: "Temples along the Nile while sailing.", activities: ["Temple of Horus Edfu", "Kom Ombo Temple"] },
-      { day: 6, title: "Aswan & Abu Simbel", description: "Philae Temple and excursion to Abu Simbel.", activities: ["Philae Temple", "Aswan High Dam", "Abu Simbel Excursion"] },
-      { day: 7, title: "Aswan Free Day & Nubian Culture", description: "Felucca ride and Nubian village.", activities: ["Felucca Ride", "Nubian Village", "Cruise Disembarkation"] },
-      { day: 8, title: "Transfer to Red Sea", description: "Transfer to Hurghada for beach relaxation.", activities: ["Transfer Aswan → Hurghada", "Beach Leisure", "Hotel Check-in"] },
-      { day: 9, title: "Departure", description: "Transfer to Hurghada Airport.", activities: ["Breakfast", "Check-out", "Airport Transfer"] },
+      {
+        day: 1,
+        title: "Arrival Cairo",
+        description: "Arrive and check in.",
+        activities: ["Airport Pick-up", "Hotel Check-in"],
+      },
+      {
+        day: 2,
+        title: "Pyramids & GEM",
+        description: "Giza and Grand Egyptian Museum.",
+        activities: ["Pyramids", "Sphinx", "GEM"],
+      },
+      {
+        day: 3,
+        title: "Cairo → Luxor, Cruise Embarkation",
+        description: "Fly to Luxor and board cruise.",
+        activities: [
+          "Flight Cairo → Luxor",
+          "Luxor Temple",
+          "Cruise Embarkation",
+        ],
+      },
+      {
+        day: 4,
+        title: "Luxor West Bank",
+        description: "Valley of the Kings and Hatshepsut.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon",
+        ],
+      },
+      {
+        day: 5,
+        title: "Edfu & Kom Ombo",
+        description: "Temples along the Nile while sailing.",
+        activities: ["Temple of Horus Edfu", "Kom Ombo Temple"],
+      },
+      {
+        day: 6,
+        title: "Aswan & Abu Simbel",
+        description: "Philae Temple and excursion to Abu Simbel.",
+        activities: ["Philae Temple", "Aswan High Dam", "Abu Simbel Excursion"],
+      },
+      {
+        day: 7,
+        title: "Aswan Free Day & Nubian Culture",
+        description: "Felucca ride and Nubian village.",
+        activities: ["Felucca Ride", "Nubian Village", "Cruise Disembarkation"],
+      },
+      {
+        day: 8,
+        title: "Transfer to Red Sea",
+        description: "Transfer to Hurghada for beach relaxation.",
+        activities: [
+          "Transfer Aswan → Hurghada",
+          "Beach Leisure",
+          "Hotel Check-in",
+        ],
+      },
+      {
+        day: 9,
+        title: "Departure",
+        description: "Transfer to Hurghada Airport.",
+        activities: ["Breakfast", "Check-out", "Airport Transfer"],
+      },
     ],
   },
 
@@ -861,12 +1284,15 @@ export const egyptPackages: Package[] = [
     durationDays: 9,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1477894880577-8b2f87157e26?w=600&q=80",
+    image: "/images/valley-of-kings.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1477894880577-8b2f87157e26?w=800&q=80",
-      "https://images.unsplash.com/photo-1592861955049-f0e4a80a8082?w=800&q=80",
-      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80",
+      "/images/luxor-ancient-temple.webp",
+      "/images/hurghada-red-sea-beach.webp",
+      "/images/nubian-village.webp",
+      "/images/hurghada-clear-water.webp",
+      "/images/aswan-philae-temple-nile.webp",
     ],
+
     description:
       "A complete Egyptian odyssey — ancient Cairo, majestic Luxor and Aswan with a Nile Cruise, then unwind on Hurghada's golden beaches for a perfect finale.",
     highlights: [
@@ -891,15 +1317,69 @@ export const egyptPackages: Package[] = [
       "Personal Expenses",
     ],
     itinerary: [
-      { day: 1, title: "Arrival Cairo", description: "Arrive and check in.", activities: ["Airport Pick-up", "Hotel Check-in"] },
-      { day: 2, title: "Pyramids & GEM", description: "Giza and Grand Egyptian Museum.", activities: ["Pyramids", "Sphinx", "GEM"] },
-      { day: 3, title: "Cairo Sightseeing", description: "Old Cairo, Citadel, Khan El Khalili.", activities: ["Egyptian Museum", "Coptic Cairo", "Khan El Khalili"] },
-      { day: 4, title: "Flight to Luxor", description: "Fly to Luxor, Karnak and Luxor Temples.", activities: ["Flight Cairo → Luxor", "Karnak Temple", "Luxor Temple"] },
-      { day: 5, title: "Luxor West Bank & Cruise Embarkation", description: "Valley of the Kings then board cruise.", activities: ["Valley of the Kings", "Hatshepsut Temple", "Cruise Embarkation"] },
-      { day: 6, title: "Edfu & Kom Ombo", description: "Two magnificent riverside temples.", activities: ["Temple of Horus Edfu", "Kom Ombo Temple"] },
-      { day: 7, title: "Aswan", description: "Philae Temple, High Dam, Nubian Village.", activities: ["Philae Temple", "Aswan High Dam", "Nubian Village", "Cruise Disembarkation"] },
-      { day: 8, title: "Aswan → Hurghada", description: "Transfer to Hurghada for beach day.", activities: ["Transfer to Hurghada", "Red Sea Beach", "Hotel Check-in"] },
-      { day: 9, title: "Departure", description: "Transfer to Hurghada Airport.", activities: ["Breakfast", "Check-out", "Airport Transfer"] },
+      {
+        day: 1,
+        title: "Arrival Cairo",
+        description: "Arrive and check in.",
+        activities: ["Airport Pick-up", "Hotel Check-in"],
+      },
+      {
+        day: 2,
+        title: "Pyramids & GEM",
+        description: "Giza and Grand Egyptian Museum.",
+        activities: ["Pyramids", "Sphinx", "GEM"],
+      },
+      {
+        day: 3,
+        title: "Cairo Sightseeing",
+        description: "Old Cairo, Citadel, Khan El Khalili.",
+        activities: ["Egyptian Museum", "Coptic Cairo", "Khan El Khalili"],
+      },
+      {
+        day: 4,
+        title: "Flight to Luxor",
+        description: "Fly to Luxor, Karnak and Luxor Temples.",
+        activities: ["Flight Cairo → Luxor", "Karnak Temple", "Luxor Temple"],
+      },
+      {
+        day: 5,
+        title: "Luxor West Bank & Cruise Embarkation",
+        description: "Valley of the Kings then board cruise.",
+        activities: [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Cruise Embarkation",
+        ],
+      },
+      {
+        day: 6,
+        title: "Edfu & Kom Ombo",
+        description: "Two magnificent riverside temples.",
+        activities: ["Temple of Horus Edfu", "Kom Ombo Temple"],
+      },
+      {
+        day: 7,
+        title: "Aswan",
+        description: "Philae Temple, High Dam, Nubian Village.",
+        activities: [
+          "Philae Temple",
+          "Aswan High Dam",
+          "Nubian Village",
+          "Cruise Disembarkation",
+        ],
+      },
+      {
+        day: 8,
+        title: "Aswan → Hurghada",
+        description: "Transfer to Hurghada for beach day.",
+        activities: ["Transfer to Hurghada", "Red Sea Beach", "Hotel Check-in"],
+      },
+      {
+        day: 9,
+        title: "Departure",
+        description: "Transfer to Hurghada Airport.",
+        activities: ["Breakfast", "Check-out", "Airport Transfer"],
+      },
     ],
   },
 
@@ -915,11 +1395,13 @@ export const egyptPackages: Package[] = [
     durationDays: 2,
     price: "On Request",
     priceNote: "contact us",
-    image: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80",
+    image: "/images/cairo-grand-egyptian.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80",
-      "https://images.unsplash.com/photo-1477894880577-8b2f87157e26?w=800&q=80",
-      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "/images/egypt-travel-experience.webp",
+      "/images/cairo-grand-egyptian.webp",
+      "/images/cairo-nile-river-sunset.webp",
+      "/images/valley-of-kings.webp",
+      "/images/luxor-temple-.webp",
     ],
     description:
       "A breathtaking short escape to Luxor — a magical Hot Air Balloon flight over the Valley of the Kings at sunrise and a peaceful Felucca ride on the Nile, departing from Cairo.",
@@ -949,14 +1431,27 @@ export const egyptPackages: Package[] = [
       {
         day: 1,
         title: "Cairo → Luxor — Hot Air Balloon & Valley of the Kings",
-        description: "Early morning transfer to Luxor Airport. At sunrise, take off on a magical hot air balloon over the Valley of the Kings. Then explore the West Bank monuments.",
-        activities: ["Flight / Transfer Cairo → Luxor", "Hot Air Balloon at Sunrise", "Valley of the Kings", "Hatshepsut Temple", "Hotel Check-in"],
+        description:
+          "Early morning transfer to Luxor Airport. At sunrise, take off on a magical hot air balloon over the Valley of the Kings. Then explore the West Bank monuments.",
+        activities: [
+          "Flight / Transfer Cairo → Luxor",
+          "Hot Air Balloon at Sunrise",
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Hotel Check-in",
+        ],
       },
       {
         day: 2,
         title: "Felucca Ride, Karnak & Return to Cairo",
-        description: "Morning visit to Karnak and Luxor Temples, followed by a relaxing Felucca ride on the Nile at sunset, then return to Cairo.",
-        activities: ["Karnak Temple", "Luxor Temple", "Felucca Nile Ride", "Transfer Luxor → Cairo"],
+        description:
+          "Morning visit to Karnak and Luxor Temples, followed by a relaxing Felucca ride on the Nile at sunset, then return to Cairo.",
+        activities: [
+          "Karnak Temple",
+          "Luxor Temple",
+          "Felucca Nile Ride",
+          "Transfer Luxor → Cairo",
+        ],
       },
     ],
   },
