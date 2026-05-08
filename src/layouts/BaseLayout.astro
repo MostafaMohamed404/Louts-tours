@@ -8,6 +8,7 @@ const {
   title = "Lotus Tours | Travel & Tourism Company",
   description = "Lotus Tours offers domestic & international tours, visas and flight booking services.",
 } = Astro.props;
+const isHome = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -30,15 +31,29 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    {
+      isHome && (
+        <link rel="preload" href="/images/Domestic-Tourism.webp" as="image" />
+      )
+    }
   </head>
 
   <body>

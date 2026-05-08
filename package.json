@@ -14,5 +14,8 @@
     "astro": "^5.17.1",
     "embla-carousel": "^8.6.0",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "vite-plugin-compression": "^0.5.1"
   }
 }

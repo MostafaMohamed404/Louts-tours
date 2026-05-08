@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -7,9 +7,11 @@
 >
   <!-- Background Image -->
   <div class="absolute inset-0 z-0">
-    <img
+    <Image
       src="/images/Domestic-Tourism.webp"
       alt="Egypt Travel"
+      width={1920}
+      height={1080}
       fetchpriority="high"
       loading="eager"
       class="w-full h-full object-cover"
