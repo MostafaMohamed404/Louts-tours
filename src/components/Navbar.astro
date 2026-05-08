@@ -252,14 +252,10 @@ const navItems = [
   </div>
 </header>
 
-<script is:inline>
-  function openMenu() {
-    document.getElementById("mobileMenu").classList.remove("translate-x-full");
-    document.getElementById("overlay").classList.remove("hidden");
-  }
-
-  function closeMenu() {
-    document.getElementById("mobileMenu").classList.add("translate-x-full");
-    document.getElementById("overlay").classList.add("hidden");
-  }
+<script>
+  import { openMenu, closeMenu } from '../scripts/navbar-mobile-menu';
+  
+  // Make functions globally available
+  (window as any).openMenu = openMenu;
+  (window as any).closeMenu = closeMenu;
 </script>

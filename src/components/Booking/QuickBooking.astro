@@ -1,30 +1,44 @@
-<!-- Quick Booking Form -->
 <section id="booking-form" class="py-24 bg-white">
   <div class="max-w-5xl mx-auto px-6">
-
-    <!-- Header -->
     <div class="text-center mb-16">
-      <span class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold">Get In Touch</span>
-      <h2 class="text-4xl md:text-5xl font-bold text-[#3E2F1C] mt-4">Quick Booking Request</h2>
+      <span
+        class="text-sm uppercase tracking-widest text-[#C6A75E] font-semibold"
+        >Get In Touch</span
+      >
+      <h2 class="text-4xl md:text-5xl font-bold text-[#3E2F1C] mt-4">
+        Quick Booking Request
+      </h2>
       <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
         Fill in your details and our team will contact you within 24 hours
       </p>
     </div>
 
-    <!-- Form Card -->
     <div class="bg-[#F8F5EF] rounded-3xl shadow-lg p-8 md:p-12">
+      <div
+        id="booking-success"
+        class="hidden mb-6 p-4 bg-green-100 text-green-800 rounded-xl text-center font-medium"
+      >
+        ✅ Your booking request has been sent! We'll contact you within 24
+        hours.
+      </div>
 
-      <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="hidden" name="form-name" value="booking" />
-        <p class="hidden"><input name="bot-field" /></p>
+      <div
+        id="booking-error"
+        class="hidden mb-6 p-4 bg-red-100 text-red-800 rounded-xl text-center font-medium"
+      >
+        ❌ Something went wrong. Please try again.
+      </div>
 
-        <!-- Full Name -->
+      <form id="booking-form-el" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label class="block mb-2 font-medium text-[#3E2F1C]">Full Name</label>
           <div class="relative">
-            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="text"
+              name="full_name"
               placeholder="Enter your full name"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
               required
@@ -32,13 +46,17 @@
           </div>
         </div>
 
-        <!-- Email -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Email Address</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Email Address</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="email"
+              name="email"
               placeholder="example@email.com"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
               required
@@ -46,13 +64,17 @@
           </div>
         </div>
 
-        <!-- Phone -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Phone Number</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Phone Number</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="tel"
+              name="phone"
               placeholder="+20 10 0000 0000"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
               required
@@ -60,12 +82,16 @@
           </div>
         </div>
 
-        <!-- Service Type -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Service Type</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Service Type</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-list absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-list absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <select
+              name="service_type"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition appearance-none"
               required
             >
@@ -82,38 +108,50 @@
           </div>
         </div>
 
-        <!-- Destination -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Destination</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Destination</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="text"
+              name="destination"
               placeholder="e.g. Dubai, Sharm El Sheikh"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
             />
           </div>
         </div>
 
-        <!-- Travel Date -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Travel Date</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Travel Date</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-calendar-days absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-calendar-days absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="date"
+              name="travel_date"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
             />
           </div>
         </div>
 
-        <!-- Number of People -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Number of Travelers</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Number of Travelers</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-users absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-users absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <input
               type="number"
+              name="travelers"
               min="1"
               placeholder="e.g. 2"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition"
@@ -121,12 +159,16 @@
           </div>
         </div>
 
-        <!-- Budget -->
         <div>
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Budget (Optional)</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Budget (Optional)</label
+          >
           <div class="relative">
-            <i class="fa-solid fa-dollar-sign absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"></i>
+            <i
+              class="fa-solid fa-dollar-sign absolute left-4 top-1/2 -translate-y-1/2 text-[#C6A75E]"
+            ></i>
             <select
+              name="budget"
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition appearance-none"
             >
               <option value="">Select budget range</option>
@@ -139,12 +181,14 @@
           </div>
         </div>
 
-        <!-- Message -->
         <div class="md:col-span-2">
-          <label class="block mb-2 font-medium text-[#3E2F1C]">Special Requests (Optional)</label>
+          <label class="block mb-2 font-medium text-[#3E2F1C]"
+            >Special Requests (Optional)</label
+          >
           <div class="relative">
             <i class="fa-solid fa-pen absolute left-4 top-5 text-[#C6A75E]"></i>
             <textarea
+              name="message"
               rows="4"
               placeholder="Any special requirements or preferences..."
               class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 bg-white focus:ring-2 focus:ring-[#C6A75E] focus:outline-none transition resize-none"
@@ -152,17 +196,19 @@
           </div>
         </div>
 
-        <!-- Submit -->
-        <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 justify-center mt-4">
+        <div
+          class="md:col-span-2 flex flex-col sm:flex-row gap-4 justify-center mt-4"
+        >
           <button
             type="submit"
+            id="booking-submit-btn"
             class="inline-flex items-center justify-center gap-3 bg-[#C6A75E] hover:bg-[#b2965c] hover:scale-105 text-white font-semibold px-12 py-4 rounded-2xl transition transform duration-300 shadow-lg"
           >
             <i class="fa-solid fa-paper-plane"></i>
             Submit Booking Request
           </button>
           <a
-            href="https://wa.me/201021578641"
+            href="https://wa.me/01040887797"
             target="_blank"
             class="inline-flex items-center justify-center gap-3 bg-gray-900 hover:bg-gray-800 hover:scale-105 text-white font-semibold px-12 py-4 rounded-2xl transition transform duration-300 shadow-lg"
           >
@@ -170,9 +216,11 @@
             Book via WhatsApp
           </a>
         </div>
-
       </form>
     </div>
-
   </div>
 </section>
+
+<script>
+  import "../../scripts/quick-booking-form";
+</script>

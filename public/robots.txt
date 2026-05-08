@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lotustours-eg.com/sitemap-index.xml

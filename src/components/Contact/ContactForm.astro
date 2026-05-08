@@ -1,6 +1,5 @@
 <section class="py-24 px-6 lg:px-20 bg-[#F8F5EF]">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
     <!-- Google Map Card -->
     <div class="h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
       <iframe
@@ -8,8 +7,7 @@
         class="w-full h-full border-0"
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <!-- Contact Form Card -->
@@ -18,18 +16,37 @@
         How We Can Help
       </h2>
 
-      <form class="grid gap-6">
+      <!-- Success Message -->
+      <div
+        id="success-msg"
+        class="hidden mb-6 p-4 bg-green-100 text-green-800 rounded-xl text-center font-medium"
+      >
+        ✅ Your message has been sent successfully! We'll get back to you soon.
+      </div>
 
+      <!-- Error Message -->
+      <div
+        id="error-msg"
+        class="hidden mb-6 p-4 bg-red-100 text-red-800 rounded-xl text-center font-medium"
+      >
+        ❌ Something went wrong. Please try again.
+      </div>
+
+      <form id="contact-form" class="grid gap-6">
         <!-- Name -->
         <div class="grid md:grid-cols-2 gap-6">
           <input
             type="text"
+            id="firstName"
             placeholder="First Name"
+            required
             class="border border-gray-300 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#C8A976] outline-none text-gray-700"
           />
           <input
             type="text"
+            id="lastName"
             placeholder="Last Name"
+            required
             class="border border-gray-300 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#C8A976] outline-none text-gray-700"
           />
         </div>
@@ -38,33 +55,42 @@
         <div class="grid md:grid-cols-2 gap-6">
           <input
             type="email"
+            id="email"
             placeholder="Email"
+            required
             class="border border-gray-300 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#C8A976] outline-none text-gray-700"
           />
           <input
             type="text"
+            id="subject"
             placeholder="Subject"
+            required
             class="border border-gray-300 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#C8A976] outline-none text-gray-700"
           />
         </div>
 
         <!-- Message -->
         <textarea
+          id="message"
           rows="6"
           placeholder="Message"
+          required
           class="border border-gray-300 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#C8A976] outline-none text-gray-700"
         ></textarea>
 
         <!-- Submit Button -->
         <button
           type="submit"
-          class="bg-[#C8A976] text-white py-4 rounded-2xl font-semibold w-full text-lg"
+          id="submit-btn"
+          class="bg-[#C8A976] text-white py-4 rounded-2xl font-semibold w-full text-lg transition-opacity duration-200"
         >
           Send Message
         </button>
-
       </form>
     </div>
-
   </div>
 </section>
+
+<script>
+  import "../../scripts/contact-form";
+</script>

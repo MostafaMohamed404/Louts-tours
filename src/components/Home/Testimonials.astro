@@ -1,3 +1,13 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    defer></script>
+</head>
+
 <section class="py-24 bg-[#F8F5EF] overflow-hidden">
   <div class="container mx-auto px-6 lg:px-20">
     <!-- Title -->
@@ -296,35 +306,11 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 
-<!-- Swiper JS -->
-<script
-  is:inline
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    new Swiper(".testimonialsSwiper", {
-      loop: true,
-      autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      speed: 700,
-      slidesPerView: 1,
-      spaceBetween: 24,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      },
-    });
-  });
+<script>
+  import "../../scripts/testimonials-swiper";
 </script>
 
 <style>
